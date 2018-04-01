@@ -1,0 +1,8 @@
+estas son las cosas a cambiar en el app.php
+
+
+salt: 77ZP0YxTqBiAQ5Ym3WvKI7hLYHfotQDXLJ6mSOWr8bBKyHCKO3NF7jRJukT3QdbX
+Server: ser-tafoya.com
+BD: sertafoy_controlescolar
+User: sertafoy_control
+password: on3efz4ss72grzqq25
