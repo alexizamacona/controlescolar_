@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Versión del servidor:         10.1.25-MariaDB - mariadb.org binary distribution
--- SO del servidor:              Win32
+-- Host:                         localhost
+-- Versión del servidor:         5.7.19 - MySQL Community Server (GPL)
+-- SO del servidor:              Win64
 -- HeidiSQL Versión:             9.4.0.5125
 -- --------------------------------------------------------
 
@@ -13,10 +13,12 @@
 
 
 -- Volcando estructura de base de datos para control
+DROP DATABASE IF EXISTS `control`;
 CREATE DATABASE IF NOT EXISTS `control` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
 USE `control`;
 
 -- Volcando estructura para tabla control.actividades
+DROP TABLE IF EXISTS `actividades`;
 CREATE TABLE IF NOT EXISTS `actividades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -30,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `actividades` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.asistencias
+DROP TABLE IF EXISTS `asistencias`;
 CREATE TABLE IF NOT EXISTS `asistencias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -41,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `asistencias` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.calendarios
+DROP TABLE IF EXISTS `calendarios`;
 CREATE TABLE IF NOT EXISTS `calendarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `periodo_id` int(11) NOT NULL,
@@ -53,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `calendarios` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.carreras
+DROP TABLE IF EXISTS `carreras`;
 CREATE TABLE IF NOT EXISTS `carreras` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8_bin NOT NULL,
@@ -63,9 +68,11 @@ CREATE TABLE IF NOT EXISTS `carreras` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.grupos
+DROP TABLE IF EXISTS `grupos`;
 CREATE TABLE IF NOT EXISTS `grupos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `materia_id` int(11) NOT NULL,
+  `clave` varchar(50) COLLATE utf8_bin NOT NULL,
   `turno` varchar(15) COLLATE utf8_bin DEFAULT 'Matutino',
   `user_id` int(11) NOT NULL,
   `periodo_id` int(11) NOT NULL,
@@ -74,16 +81,18 @@ CREATE TABLE IF NOT EXISTS `grupos` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.horarios
+DROP TABLE IF EXISTS `horarios`;
 CREATE TABLE IF NOT EXISTS `horarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `grupo_id` int(11) NOT NULL,
-  `dia` varchar(9) COLLATE utf8_bin NOT NULL,
+  `dia` varchar(11) COLLATE utf8_bin NOT NULL,
   `hora_inicio` time NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.inscripciones
+DROP TABLE IF EXISTS `inscripciones`;
 CREATE TABLE IF NOT EXISTS `inscripciones` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -93,6 +102,7 @@ CREATE TABLE IF NOT EXISTS `inscripciones` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.materias
+DROP TABLE IF EXISTS `materias`;
 CREATE TABLE IF NOT EXISTS `materias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8_bin NOT NULL,
@@ -104,6 +114,7 @@ CREATE TABLE IF NOT EXISTS `materias` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.parciales
+DROP TABLE IF EXISTS `parciales`;
 CREATE TABLE IF NOT EXISTS `parciales` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `periodo_id` int(11) NOT NULL,
@@ -115,27 +126,29 @@ CREATE TABLE IF NOT EXISTS `parciales` (
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.periodos
+DROP TABLE IF EXISTS `periodos`;
 CREATE TABLE IF NOT EXISTS `periodos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tipo` varchar(20) COLLATE utf8_bin NOT NULL,
-  `plural` varchar(20) COLLATE utf8_bin NOT NULL,
-  `descripcion` varchar(20) COLLATE utf8_bin NOT NULL,
-  `ciclo` varchar(10) COLLATE utf8_bin NOT NULL,
+  `tipo` varchar(50) COLLATE utf8_bin NOT NULL,
+  `plural` varchar(50) COLLATE utf8_bin NOT NULL,
+  `descripcion` varchar(50) COLLATE utf8_bin NOT NULL,
+  `ciclo` varchar(50) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- La exportación de datos fue deseleccionada.
 -- Volcando estructura para tabla control.users
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '0',
-  `password` varchar(100) COLLATE utf8_bin NOT NULL DEFAULT '0',
-  `nombre` varchar(20) COLLATE utf8_bin NOT NULL DEFAULT '0',
-  `a_paterno` varchar(17) COLLATE utf8_bin NOT NULL DEFAULT '0',
-  `a_materno` varchar(17) COLLATE utf8_bin NOT NULL DEFAULT '0',
-  `sexo` varchar(10) COLLATE utf8_bin NOT NULL DEFAULT '0',
-  `email` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '0',
-  `rol` varchar(11) COLLATE utf8_bin NOT NULL DEFAULT '0',
+  `username` varchar(50) COLLATE utf8_bin NOT NULL,
+  `password` varchar(100) COLLATE utf8_bin NOT NULL,
+  `nombre` varchar(20) COLLATE utf8_bin NOT NULL,
+  `apellido_paterno` varchar(17) COLLATE utf8_bin NOT NULL,
+  `apellido_materno` varchar(17) COLLATE utf8_bin NOT NULL,
+  `sexo` varchar(10) COLLATE utf8_bin NOT NULL,
+  `email` varchar(50) COLLATE utf8_bin NOT NULL,
+  `rol` varchar(11) COLLATE utf8_bin NOT NULL DEFAULT 'estudiante',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
