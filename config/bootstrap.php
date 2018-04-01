@@ -193,7 +193,7 @@ Type::build('timestamp')
  * inflection functions.
  */
 //Inflector::rules('plural', ['/^(inflect)or$/i' => '\1ables']);
-//Inflector::rules('irregular', ['red' => 'redlings']);
+Inflector::rules('irregular', ['actividad'=>'actividades','inscripcion'=>'inscripciones','parcial'=>'parciales']);
 //Inflector::rules('uninflected', ['dontinflectme']);
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
 
