@@ -4,17 +4,18 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="/css/materialize.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 </head>
 
 <body class="grey lighten-4">
 
-	<nav class="red darken-4 z-depth-3">
+	<nav class="background-body z-depth-3">
 
 		
 
-		<a href="#" class="brand-logo"> <i class="material-icons">menu</i>	control escolar</a>
+		<a href="#" class="brand-logo"> <i class="material-icons padding-icon">menu</i>	control escolar</a>
 		
 
 	</nav>
