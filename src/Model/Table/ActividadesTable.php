@@ -34,7 +34,7 @@ class ActividadesTable extends Table
         parent::initialize($config);
 
         $this->setTable('actividades');
-        $this->setDisplayField('id');
+        $this->setDisplayField('descripcion');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Grupos', [

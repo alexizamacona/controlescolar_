@@ -34,7 +34,7 @@ class InscripcionesTable extends Table
         parent::initialize($config);
 
         $this->setTable('inscripciones');
-        $this->setDisplayField('id');
+        $this->setDisplayField('user_id');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Users', [

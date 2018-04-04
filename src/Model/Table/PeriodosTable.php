@@ -35,7 +35,7 @@ class PeriodosTable extends Table
         parent::initialize($config);
 
         $this->setTable('periodos');
-        $this->setDisplayField('id');
+        $this->setDisplayField('descripcion');
         $this->setPrimaryKey('id');
 
         $this->hasMany('Calendarios', [

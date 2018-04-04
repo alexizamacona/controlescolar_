@@ -34,7 +34,7 @@ class AsistenciasTable extends Table
         parent::initialize($config);
 
         $this->setTable('asistencias');
-        $this->setDisplayField('id');
+        $this->setDisplayField('user_id');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Users', [

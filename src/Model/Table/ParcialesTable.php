@@ -33,7 +33,7 @@ class ParcialesTable extends Table
         parent::initialize($config);
 
         $this->setTable('parciales');
-        $this->setDisplayField('id');
+        $this->setDisplayField('descripcion');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Periodos', [
