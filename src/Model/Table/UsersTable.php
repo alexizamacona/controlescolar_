@@ -36,7 +36,7 @@ class UsersTable extends Table
         parent::initialize($config);
 
         $this->setTable('users');
-        $this->setDisplayField('username');
+        $this->setDisplayField('nombre_completo');
         $this->setPrimaryKey('id');
 
         $this->hasMany('Actividades', [
@@ -112,6 +112,8 @@ class UsersTable extends Table
             ->requirePresence('rol', 'create')
             ->notEmpty('rol');
 
+
+
         return $validator;
     }
 
@@ -126,6 +128,7 @@ class UsersTable extends Table
     {
         $rules->add($rules->isUnique(['username']));
         $rules->add($rules->isUnique(['email']));
+        
 
         return $rules;
     }

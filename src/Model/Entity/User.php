@@ -65,4 +65,10 @@ class User extends Entity
             return (new DefaultPasswordHasher)->hash($password);
         }
     }
+
+    protected function _getNombre_completo(){
+        return $this->_properties['nombre'].' '.$this->_properties['apellido_paterno'].' '.$this->_properties['apellido_materno'];
+    }
+
+
 }
