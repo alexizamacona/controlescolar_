@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
     <link rel="stylesheet" href="/css/materialize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
-    <script src="/js/general.js" />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/materialize.js"></script>
 </head>
 
 <body class="grey lighten-4">
