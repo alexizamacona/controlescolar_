@@ -1879,10 +1879,10 @@ class Validator implements ArrayAccess, IteratorAggregate, Countable
         $errors = [];
         // Loading default provider in case there is none
         $this->getProvider('default');
-        $message = 'The provided value is invalid';
+        $message = 'El valor introducido es invaliado';
 
         if ($this->_useI18n) {
-            $message = __d('cake', 'The provided value is invalid');
+            $message = __d('cake', 'El valor introducido es invalido');
         }
 
         foreach ($rules as $name => $rule) {
