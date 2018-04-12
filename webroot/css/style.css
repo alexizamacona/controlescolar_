@@ -2,13 +2,19 @@
 
 
 .padding-icon{
-	padding:1em;
+	padding:0;
+}
+
+.margin-icon{
+	margin-left: .5em;
 }
 
 
 
-
 /*Colors*/
+.center{
+	align-content: center;
+}
 
 .header-nav{
 	background: #b71c1c;

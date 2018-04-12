@@ -16,7 +16,7 @@ class UsersController extends AppController
 
 
 
-    public function agregar()
+    public function registrar()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
