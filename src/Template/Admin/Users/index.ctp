@@ -10,9 +10,9 @@
         <table >
             <thead>
                 <tr>
-                    <th scope="col"><?= $this->Paginator->sort('Matricula') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('Nombre de usuario') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('Nombre') ?></th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nombre de usuario</th>
+                    <th scope="col">Nombre</th>
                     <th scope="col" class="actions"><?= __('Actiones') ?></th>
                 </tr>
             </thead>
@@ -49,9 +49,9 @@
         <table >
             <thead>
                 <tr>
-                    <th scope="col"><?= $this->Paginator->sort('Matricula') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('Nombre de usuario') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('Nombre') ?></th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nombre de usuario</th>
+                    <th scope="col">'Nombre</th>
                     <th scope="col" class="actions"><?= __('Actiones') ?></th>
                 </tr>
             </thead>
@@ -88,9 +88,9 @@
         <table >
             <thead>
                 <tr>
-                    <th scope="col"><?= $this->Paginator->sort('Matricula') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('Nombre de usuario') ?></th>
-                    <th scope="col"><?= $this->Paginator->sort('Nombre') ?></th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Nombre de usuario</th>
+                    <th scope="col">Nombre</th>
                     <th scope="col" class="actions"><?= __('Actiones') ?></th>
                 </tr>
             </thead>    
