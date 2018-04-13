@@ -57,7 +57,7 @@
             </thead>
             <tbody>
                 <?php foreach ($users as $user): ?>
-                    <?php if($user->rol == 'maestro' or $user->rol == "Maestro"){?>
+                    <?php if($user->rol == 'profesor' or $user->rol == "Profesor"){?>
                     <tr>
                         <td><?= $this->Number->format($user->id) ?></td>
                         <td><?= h($user->username) ?></td>
