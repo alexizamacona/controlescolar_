@@ -6,10 +6,10 @@
 
     <link rel="stylesheet" href="/css/materialize.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/js/jquery.js"></script>
     <script src="/js/materialize.js"></script>
+    <script src="/js/general.js"></script>
 </head>
 
 <body class="background-body">
