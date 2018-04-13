@@ -15,10 +15,10 @@ class UsersController extends AppController
         
     }
 
-    public function ver($id = null)
+    public function view($id = null)
     {
         $user = $this->Users->get($id, [
-            'contain' => ['Actividades', 'Asistencias', 'Grupos', 'Inscripciones']
+            'contain' => ['Grupos'=>['Materias'=>'Carreras'], 'Inscripciones']
         ]);
 
         $this->set('user', $user);

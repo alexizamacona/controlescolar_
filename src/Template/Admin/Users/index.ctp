@@ -24,7 +24,7 @@
                         <td><?= h($user->username) ?></td>
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('Ver'), ['action' => 'ver', $user->id]) ?>
+                            <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
                             
                         </td>
                     </tr>
