@@ -12,9 +12,9 @@
     <script src="/js/materialize.js"></script>
 </head>
 
-<body class="grey lighten-4">
+<body class="background-body">
 
-    <nav class="background-body z-depth-3">
+    <nav class="background-header z-depth-3">
 
 
 
