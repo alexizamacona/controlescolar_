@@ -18,13 +18,13 @@
             </thead>
             <tbody>
                 <?php foreach ($users as $user): ?>
-                    <?php if($user->rol == 'estudiante'){?>
+                    <?php if($user->rol == 'estudiante' or $user->rol == 'Estudiante'){?>
                     <tr>
                         <td><?= $this->Number->format($user->id) ?></td>
                         <td><?= h($user->username) ?></td>
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
+                            <?= $this->Html->link(__('Ver'), ['action' => 'ver', $user->id]) ?>
                             
                         </td>
                     </tr>
@@ -101,8 +101,6 @@
                         <td><?= $this->Number->format($user->id) ?></td>
                         <td><?= h($user->username) ?></td>
                         <td><?= h($user->nombre_completo) ?></td>
-                        <td><?= h($user->email) ?></td>
-                        <td><?= h($user->rol) ?></td>
                         <td class="actions">
                             <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
                            
