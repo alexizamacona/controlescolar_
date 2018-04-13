@@ -37,3 +37,11 @@
 	background: #d50000;
 }
 
+
+pre.debug{
+    background: #ffffaa;
+    padding: 1em;
+    font-size: 12px;
+    color: red;
+    border-radius: 1em;
+}
