@@ -50,7 +50,6 @@ class GruposTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Periodos', [
-            'foreignKey' => 'periodo_id',
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Actividades', [

@@ -12,9 +12,9 @@
     <script src="/js/materialize.js"></script>
 </head>
 
-<body class="grey lighten-4">
+<body class="background-body">
 
-    <nav class="background-body z-depth-3">
+    <nav class="background-header z-depth-3">
 
 
 
@@ -25,9 +25,6 @@
     <div class="row">
         <div class="col s2">
             <ul>
-                <li><a href="" class="black-text">opcion 1</a></li>
-                <li><a href="" class="black-text">opcion 2</a></li>
-                <li><a href="" class="black-text">opcion 3</a></li>
             </ul>
         </div>
 

@@ -1,22 +1,31 @@
 <?php
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Controller\AppController;
 
-/**
- * Users Controller
- *
- * @property \App\Model\Table\UsersTable $Users
- *
- * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
+
 class UsersController extends AppController
 {
+    public function index()
+    {
+        $users = $this->paginate($this->Users);
+        
+        
+        $this->set(compact('users'));
+        
+    }
+
+    public function view($id = null)
+    {
+        $user = $this->Users->get($id, [
+            'contain' => ['Grupos'=>['Materias'=>'Carreras'], 'Inscripciones']
+        ]);
+
+        $this->set('user', $user);
+    }
 
 
-
-
-    public function registrar()
+     public function registrar()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {

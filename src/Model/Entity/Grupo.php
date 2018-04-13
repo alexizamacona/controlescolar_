@@ -37,7 +37,6 @@ class Grupo extends Entity
         'clave' => true,
         'turno' => true,
         'user_id' => true,
-        'periodo_id' => true,
         'materia' => true,
         'user' => true,
         'periodo' => true,
