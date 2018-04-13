@@ -25,9 +25,6 @@
     <div class="row">
         <div class="col s2">
             <ul>
-                <li><a href="" class="black-text">opcion 1</a></li>
-                <li><a href="" class="black-text">opcion 2</a></li>
-                <li><a href="" class="black-text">opcion 3</a></li>
             </ul>
         </div>
 
