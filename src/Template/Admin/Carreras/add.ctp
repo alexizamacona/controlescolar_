@@ -1,13 +1,17 @@
 <?php
+$modalidad = [
+'cuatrimestral'=> 'Cuatrimestral',
+'semestral'=> 'Semestral',
+]
 ?>
-<div class="Carreras form large-6 medium-6 columns content">
+<div class="Carreras form large-10 medium-10 columns content">
     <?= $this->Form->create($carrera) ?>
     <fieldset>
-        <legend><?= __('AGREGAR CARRERA') ?></legend>
+        <legend><?= __('REGISTRAR CARRERA') ?></legend>
         <?php
-            echo $this->Form->control('name');
+            echo $this->Form->control('nombre');
             echo $this->Form->control('duracion');
-            echo $this->Form->control('modalidad');
+            echo $this->Form->control('modalidad',['options'=>$modalidad]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Crear'),["class"=>"btn"]) ?>

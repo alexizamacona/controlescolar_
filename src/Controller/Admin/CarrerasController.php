@@ -17,6 +17,11 @@ class CarrerasController extends AppController
             }
             $this->Flash->error(__('Problemas al guardar la carrera, intentelo nuevamente.'));
         }
-       $this->set("carrera");
-	}
-}
+        $this->set(compact("carrera"));
+    }
+    public function view($id=null)
+    {
+        $carrera = $this->Carreras->get($id);
+        $this->set('carrera', $carrera);
+    }
+};
