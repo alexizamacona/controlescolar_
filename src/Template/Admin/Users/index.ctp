@@ -10,7 +10,7 @@
         <table >
             <thead>
                 <tr>
-                    <th scope="col">Matricula</th>
+
                     <th scope="col">Nombre de usuario</th>
                     <th scope="col">Nombre</th>
                     <th scope="col" class="actions"><?= __('Actiones') ?></th>
@@ -20,7 +20,7 @@
                 <?php foreach ($users as $user): ?>
                     <?php if($user->rol == 'estudiante' or $user->rol == 'Estudiante'){?>
                     <tr>
-                        <td><?= $this->Number->format($user->id) ?></td>
+
                         <td><?= h($user->username) ?></td>
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
@@ -41,7 +41,7 @@
         <table >
             <thead>
                 <tr>
-                    <th scope="col">Matricula</th>
+
                     <th scope="col">Nombre de usuario</th>
                     <th scope="col">'Nombre</th>
                     <th scope="col" class="actions"><?= __('Actiones') ?></th>
@@ -51,7 +51,7 @@
                 <?php foreach ($users as $user): ?>
                     <?php if($user->rol == 'profesor' or $user->rol == "Profesor"){?>
                     <tr>
-                        <td><?= $this->Number->format($user->id) ?></td>
+
                         <td><?= h($user->username) ?></td>
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
@@ -72,7 +72,7 @@
         <table >
             <thead>
                 <tr>
-                    <th scope="col">Matricula</th>
+
                     <th scope="col">Nombre de usuario</th>
                     <th scope="col">Nombre</th>
                     <th scope="col" class="actions"><?= __('Actiones') ?></th>
@@ -82,7 +82,7 @@
                 <?php foreach ($users as $user): ?>
                     <?php if($user->rol == 'director' or $user->rol == 'Director'){?>
                     <tr>
-                        <td><?= $this->Number->format($user->id) ?></td>
+
                         <td><?= h($user->username) ?></td>
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
