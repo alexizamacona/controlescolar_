@@ -31,7 +31,7 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('El Usuario ha sido registrado.'));
+                $this->Flash->success(__('El Usuario ha sido registrado exitosamente.'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -40,6 +40,18 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
+    public function delete($id = null)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+        $user = $this->Users->get($id);
+        if ($this->Users->delete($user)) {
+            $this->Flash->success(__('El usuario ha sido eliminado exitosamente.'));
+        } else {
+            $this->Flash->error(__('El usuario no ha podido ser borrado. Por favor intenta otra vez.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
 
 
 }
