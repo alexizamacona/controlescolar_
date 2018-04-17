@@ -31,15 +31,7 @@
                     <?php  } endforeach; ?>
                 </tbody>
         </table>
-        <div class="paginator center">
-            <ul class="pagination">
 
-                <?= $this->Paginator->prev('< ' . __('Anterior')) ?>
-                <?= $this->Paginator->numbers() ?>
-                <?= $this->Paginator->next(__('Siguiente') . ' >') ?>
-
-            </ul>
-        </div>
     </div>
 </div>
 
@@ -70,15 +62,7 @@
                 <?php  } endforeach; ?>
                 </tbody>
         </table>
-        <div class="paginator center">
-            <ul class="pagination">
-
-                <?= $this->Paginator->prev('< ' . __('Anterior')) ?>
-                <?= $this->Paginator->numbers() ?>
-                <?= $this->Paginator->next(__('Siguiente') . ' >') ?>
-
-            </ul>
-        </div>
+        
     </div>
 </div>
 
@@ -109,14 +93,5 @@
                     <?php  } endforeach; ?>
                 </tbody>
         </table>
-        <div class="paginator center">
-            <ul class="pagination">
-
-                <?= $this->Paginator->prev('< ' . __('Anterior')) ?>
-                <?= $this->Paginator->numbers() ?>
-                <?= $this->Paginator->next(__('Siguiente') . ' >') ?>
-
-            </ul>
-        </div>
     </div>
 </div>
