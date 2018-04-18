@@ -43,6 +43,7 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->LoadComponent('Auth');
 
         /*
          * Enable the following components for recommended CakePHP security settings.
