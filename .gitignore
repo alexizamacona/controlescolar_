@@ -29,3 +29,4 @@ config/cambiar_en_app_php.txt
 config/cambiar_en_app_php.txt
 src/Template/Users/registrar.ctp
 src/Template/Users/registrar.ctp
+src/Controller/Admin/UsersController.php

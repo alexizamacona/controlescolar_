@@ -25,7 +25,7 @@ class UsersController extends AppController
     }
 
 
-     public function registrar()
+    public function registrar()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -53,5 +53,21 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    public function edit($id = null)
+    {
+        $user = $this->Users->get($id, [
+            'contain' => []
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $user = $this->Users->patchEntity($user, $this->request->getData());
+            if ($this->Users->save($user)) {
+                $this->Flash->success(__('El usuario ha sido modificado exitosamente.'));
+
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('El usuario no pudo ser modificado. Por favor intenta de nuevo.'));
+        }
+        $this->set(compact('user'));
+    }
 
 }
