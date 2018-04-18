@@ -5,13 +5,13 @@ use App\Controller\AppController;
 
 class MateriasController extends AppController
 {	
-	public function view()
+	public function view($id)
 	{
 		$materias = $this ->Materias->get($id, [
-			'contain' => ['name', 'carrera_id', 'grado','creditos']
+			'contain' => ['Carreras']
 			]);
-
 		$this->set('materia', $materias);
+		
 	}
 	/********************************************************/
 
