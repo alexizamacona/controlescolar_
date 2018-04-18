@@ -1,8 +1,20 @@
+
 <?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
+
+$lstRoles=[
+    'admin'=>'Administrador',
+    'profesor'=>'Profesor',
+    'director'=>'Director',
+    'estudiante'=>'Estudiante',
+];
+$genero=[
+    'h'=> 'Masculino',
+    'm'=> 'Femenino',
+];
 ?>
 
 <div class="">
@@ -19,6 +31,7 @@
 
                 <?php
 
+
                 echo $this->Form->control('username');
                 echo $this->Form->control('password');
                 echo $this->Form->control('nombre');
@@ -30,19 +43,29 @@
             <div class="col s5">
                 <?php 
                 echo $this->Form->control('apellido_materno');
-                echo $this->Form->control('sexo');
-                echo $this->Form->input('rol');
-                echo $this->Form->control('email');
+                echo $this->Form->control('sexo',['options'=>$genero]);
                 ?>
-            </div>
+                <?= $this->Form->control('rol',['options'=>$lstRoles]) ?>
 
+
+
+            <?php echo $this->Form->control('email');?>
         </div>
+
     </div>
-    <div class="button col of" style="margin-left: 70%;"></div>
-    <button class="btn waves-effect waves-light" type="submit" name="action"> Crear Usuario
-        <i class="material-icons right">send</i>
-    </button>
+</div>
+<div class="button col of" style="margin-left: 81.65%;"></div>
+<button class="btn waves-effect waves-light" type="submit" name="action"> Registrar
+    <i class="material-icons right">send</i>
+</button>
 
 
-    <?= $this->Form->end() ?>
-</div> 
+<?= $this->Form->end() ?>
+</div>
+
+
+<script>
+     $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
