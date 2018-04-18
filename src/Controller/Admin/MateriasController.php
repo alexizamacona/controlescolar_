@@ -28,7 +28,12 @@ class MateriasController extends AppController
 
 		$this->set(compact('materias'));
 	}
+  public function view()
+  {
+  	 $materias = $this ->Materias->get($id, [
+            'contain' => ['name', 'carrera_id', 'grado','creditos']
+        ]);
 
-
-
+        $this->set('materia', $materias);
+   }
 };  
