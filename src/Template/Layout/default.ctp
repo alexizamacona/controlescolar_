@@ -6,10 +6,10 @@
 
     <link rel="stylesheet" href="/css/materialize.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/js/jquery.js"></script>
     <script src="/js/materialize.js"></script>
+    <script src="/js/general.js"></script>
 </head>
 
 <body class="background-body">
@@ -25,9 +25,6 @@
     <div class="row">
         <div class="col s2">
             <ul>
-                <li><a href="" class="black-text">opcion 1</a></li>
-                <li><a href="" class="black-text">opcion 2</a></li>
-                <li><a href="" class="black-text">opcion 3</a></li>
             </ul>
         </div>
 
