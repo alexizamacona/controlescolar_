@@ -10,7 +10,6 @@
 }
 
 
-
 /*Colors*/
 .center{
 	align-content: center;
@@ -21,12 +20,15 @@
 }
 
 .color-1{
-	background: #ffff00;
+	background: #ffca28;
 }
 
 	/* ventanas emergentes o muestras */
 .color-2{
 	background: #e0e0e0;
+}
+.color-3{
+	background: #ffff00;
 }
 
 .background-body{
