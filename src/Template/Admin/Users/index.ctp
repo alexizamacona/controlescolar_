@@ -25,7 +25,7 @@
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
                             <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
-                            <?= $this->Form->postLink(__('Borrar'), ['action' => 'delete', $user->id], ['confirm' => __('¿Estas seguro que quieres borrar al usuario # {0}? Una vez eliminado no podrá ser recuperado.', $user->id)]) ?>
+                            <?= $this->Form->postLink(__('Borrar'), ['action' => 'delete', $user->id], ['confirm' => __('¿Estas seguro que quieres borrar al usuario '.$user->nombre_completo.'? Una vez eliminado no podrá ser recuperado.', $user->id)]) ?>
                         </td>
                     </tr>
                     <?php  } endforeach; ?>
@@ -56,6 +56,7 @@
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
                             <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
+                            <?= $this->Form->postLink(__('Borrar'), ['action' => 'delete', $user->id], ['confirm' => __('¿Estas seguro que quieres borrar al usuario '.$user->nombre_completo.'? Una vez eliminado no podrá ser recuperado.', $user->id)]) ?>
                             
                         </td>
                     </tr>
@@ -87,6 +88,7 @@
                         <td><?= h($user->nombre_completo) ?></td>
                         <td class="actions">
                             <?= $this->Html->link(__('Ver'), ['action' => 'view', $user->id]) ?>
+                            <?= $this->Form->postLink(__('Borrar'), ['action' => 'delete', $user->id], ['confirm' => __('¿Estas seguro que quieres borrar al usuario '.$user->nombre_completo.'? Una vez eliminado no podrá ser recuperado.', $user->id)]) ?>
                            
                         </td>
                     </tr>
