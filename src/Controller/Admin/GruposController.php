@@ -25,11 +25,15 @@ class GruposController extends AppController
     $this->set(compact("materias"));
     $this->set(compact("users"));
   }
-  public function view($id=null)
-     {
-        $grupo = $this->Grupos->get($id);
 
-        $this->set('grupo', $grupo);
-    }
+
+
+  public function view($id=null)
+  {
+    $grupo = $this->Grupos->get($id, [
+            'contain' => ['Users', 'Materias']
+        ]);
+    $this->set('grupo', $grupo);
+  }
 
 }

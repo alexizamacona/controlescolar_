@@ -9,7 +9,7 @@ $modalidad = [
     <fieldset>
         <legend><?= __('REGISTRAR CARRERA') ?></legend>
         <?php
-            echo $this->Form->control('nombre');
+            echo $this->Form->control('name');
             echo $this->Form->control('duracion');
             echo $this->Form->control('modalidad',['options'=>$modalidad]);
         ?>
