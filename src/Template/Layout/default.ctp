@@ -18,7 +18,7 @@
 
 
 
-        <a href="#" class="brand-logo center">  Control Escolar</a>
+        <a href="/" class="brand-logo center">  Control Escolar</a>
 
 
     </nav>
