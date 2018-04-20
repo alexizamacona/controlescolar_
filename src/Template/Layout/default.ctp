@@ -16,9 +16,9 @@
 
     <nav class="background-header z-depth-3">
 
+    
 
-
-        <a href="/" class="brand-logo center">  Control Escolar</a>
+        <a href="/<?=$roldeusuario ?>" class="brand-logo center">  Control Escolar </a>
 
 
     </nav>
@@ -31,6 +31,7 @@
         <div class="col s8">
             <?= $this->Flash->render() ?>
             <?= $this->fetch('content') ?>
+            
         </div>
 
 
@@ -40,6 +41,7 @@
 <script>
   $(document).ready(function(){
     $('.tabs').tabs();
+
 });
   
 </script>
