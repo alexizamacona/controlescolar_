@@ -34,4 +34,5 @@
         </table>
 
     </div>
-</div>
+</div>  
+     <a class="btn-floating btn-large waves-effect waves-light  teal accent-4 right" href="/admin/carreras/add"><i class="material-icons">add</i></a>

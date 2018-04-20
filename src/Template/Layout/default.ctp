@@ -37,5 +37,10 @@
 
     </div>
 </body>
-
+<script>
+  $(document).ready(function(){
+    $('.tabs').tabs();
+});
+  
+</script>
 </html>
