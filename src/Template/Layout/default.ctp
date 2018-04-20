@@ -18,7 +18,7 @@
 
 
 
-        <a href="#" class="brand-logo"> <i class="material-icons padding-icon">menu</i> control escolar</a>
+        <a href="#" class="brand-logo center">  Control Escolar</a>
 
 
     </nav>
