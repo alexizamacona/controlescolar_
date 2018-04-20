@@ -38,15 +38,9 @@ class PeriodosTable extends Table
         $this->setDisplayField('descripcion');
         $this->setPrimaryKey('id');
 
-        $this->hasMany('Calendarios', [
-            'foreignKey' => 'periodo_id'
-        ]);
-        $this->hasMany('Grupos', [
-            'foreignKey' => 'periodo_id'
-        ]);
-        $this->hasMany('Parciales', [
-            'foreignKey' => 'periodo_id'
-        ]);
+        $this->hasMany('Calendarios');
+        $this->hasMany('Parciales');
+        $this->hasMany('Carreras');
     }
 
     /**

@@ -36,9 +36,8 @@ class CarrerasTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-        $this->hasMany('Materias', [
-            'foreignKey' => 'carrera_id'
-        ]);
+        $this->hasMany('Materias');
+        $this->belongsTo('Periodos');
     }
 
     /**
@@ -63,12 +62,6 @@ class CarrerasTable extends Table
             ->integer('duracion')
             ->requirePresence('duracion', 'create')
             ->notEmpty('duracion');
-
-        $validator
-            ->scalar('modalidad')
-            ->maxLength('modalidad', 50)
-            ->requirePresence('modalidad', 'create')
-            ->notEmpty('modalidad');
 
         return $validator;
     }

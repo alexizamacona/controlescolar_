@@ -38,30 +38,14 @@ class GruposTable extends Table
         parent::initialize($config);
 
         $this->setTable('grupos');
-        $this->setDisplayField('id');
+        $this->setDisplayField('clave');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Materias', [
-            'foreignKey' => 'materia_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Periodos', [
-            'foreignKey' => 'periodo_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->hasMany('Actividades', [
-            'foreignKey' => 'grupo_id'
-        ]);
-        $this->hasMany('Horarios', [
-            'foreignKey' => 'grupo_id'
-        ]);
-        $this->hasMany('Inscripciones', [
-            'foreignKey' => 'grupo_id'
-        ]);
+        $this->belongsTo('Materias');
+        $this->belongsTo('Users');
+        $this->hasMany('Actividades');
+        $this->hasMany('Horarios');
+        $this->hasMany('Inscripciones');
     }
 
     /**
