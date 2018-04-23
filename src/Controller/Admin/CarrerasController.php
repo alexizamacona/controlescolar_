@@ -6,9 +6,7 @@ use App\Controller\AppController;
 class CarrerasController extends AppController
 {
     public function index(){
-        $carreras = $this->paginate($this->Carreras);
-        
-        
+        $carreras = $this->Carreras->find()->contain(['Periodos']);       
         $this->set(compact('carreras'));
     }
 	public function add()
