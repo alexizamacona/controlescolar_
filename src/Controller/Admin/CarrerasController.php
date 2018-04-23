@@ -27,7 +27,7 @@ class CarrerasController extends AppController
     }
     public function view($id=null)
     {
-        $carrera = $this->Carreras->get($id);
+        $carrera = $this->Carreras->get($id,['contain'=>['Periodos']]);
         $this->set('carrera', $carrera);
     }
 };
