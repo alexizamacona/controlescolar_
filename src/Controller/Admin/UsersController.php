@@ -6,6 +6,13 @@ use App\Controller\AppController;
 
 class UsersController extends AppController
 {
+    public function portadadeladmin(){
+        $users=$this->Users->find('all')->contain(['Grupos'=>['Materias'=>'Carreras'], 'Inscripciones']);
+
+        $this->set(compact('users'));
+    }
+
+    
     public function index()
     {
         $users = $this->paginate($this->Users);

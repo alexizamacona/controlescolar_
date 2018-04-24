@@ -10,6 +10,8 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/materialize.js"></script>
     <script src="/js/general.js"></script>
+    <script src="/js/Chart.bundle.min.js"></script>
+
 </head>
 
 <body class="background-body">

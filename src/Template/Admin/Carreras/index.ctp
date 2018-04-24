@@ -26,7 +26,6 @@
                         <td><?= h($carrera->modalidad)?></td>
                         <td class="actions">
                             <?= $this->Html->link(__('Ver'), ['action' => 'view', $carrera->id]) ?>
-                            
                         </td>
                     </tr>
                     <?php endforeach; ?>
