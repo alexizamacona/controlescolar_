@@ -1,4 +1,8 @@
 <?php
+$turnos = [
+    'matutino' => 'Matutino',
+    'vespertino' => 'Vespertino',
+];
 ?>
 <div class="Grupos form large-10 medium-8 columns content">
     <?= $this->Form->create($grupo) ?>
@@ -10,7 +14,7 @@
 
             <?php
             echo $this->Form->control('materia_id');
-            echo $this->Form->control('turno');
+            echo $this->Form->control('turno',['options'=>$turnos]);
             echo $this->Form->text('periodo_id',['default'=>1]);
             echo $this->Form->control('user_id',['label'=>'Profesor de la materia']);
             ?>
