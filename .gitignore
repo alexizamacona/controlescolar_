@@ -32,3 +32,4 @@ src/Template/Users/registrar.ctp
 src/Controller/Admin/UsersController.php
 src/Template/Admin/Carreras/index.ctp
 src/Template/Admin/index.ctp
+src/Template/Admin/Grupos/add.ctp
