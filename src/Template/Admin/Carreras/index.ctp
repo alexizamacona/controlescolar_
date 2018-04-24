@@ -6,7 +6,7 @@
 ?>
 <div class="card-panel">
     <div class="users index large-9 medium-8 columns content-4">
-        <h3><?= __('Estudiantes') ?></h3>
+        <h3><?= __('Carreras') ?></h3>
         <table >
             <thead>
                 <tr>
