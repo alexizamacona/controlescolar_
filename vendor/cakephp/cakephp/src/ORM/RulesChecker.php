@@ -54,9 +54,9 @@ class RulesChecker extends BaseRulesChecker
         }
         if (!$message) {
             if ($this->_useI18n) {
-                $message = __d('cake', 'This value is already in use');
+                $message = __d('cake', 'Esta información ya ha sido registrada previamente. Intente nuevamente.');
             } else {
-                $message = 'This value is already in use';
+                $message = 'Esta información ya ha sido registrada previamente. Intente nuevamente.';
             }
         }
 
