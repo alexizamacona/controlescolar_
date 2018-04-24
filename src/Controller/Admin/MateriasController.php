@@ -8,7 +8,7 @@ class MateriasController extends AppController
 	public function view($id)
 	{
 		$materias = $this ->Materias->get($id, [
-			'contain' => ['Carreras']
+			'contain' => ['Carreras','Grupos']
 			]);
 		$this->set('materia', $materias);
 		

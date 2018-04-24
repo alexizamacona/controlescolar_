@@ -36,6 +36,12 @@ class UsersController extends AppController
         $this->Auth->logout();
         $this->redirect('/');
     }
+
+    public function portadaestudiantes()
+    {
+        $yo=$this->Users->get($this->Auth->user('id'));
+        $this->set(compact('yo'));
+    }
     
 
     public function agregar()

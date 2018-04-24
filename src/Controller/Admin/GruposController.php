@@ -36,4 +36,10 @@ class GruposController extends AppController
     $this->set('grupo', $grupo);
   }
 
+  public function index(){
+    $grupos = $this->Grupos->find()->contain(['Materias','Users']);
+        
+        
+        $this->set(compact('grupos'));
+  }
 }
