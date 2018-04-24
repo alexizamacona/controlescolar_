@@ -86,7 +86,7 @@ class GruposTable extends Table
         $rules->add($rules->existsIn(['materia_id'], 'Materias'));
         $rules->add($rules->existsIn(['user_id'], 'Users'));
         $rules->add($rules->existsIn(['periodo_id'], 'Periodos'));
-        $rules->add($rules->isUnique('clave'));
+        $rules->add($rules->isUnique(['clave']));
 
         return $rules;
     }
