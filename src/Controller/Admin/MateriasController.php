@@ -41,5 +41,19 @@ class MateriasController extends AppController
 	}
 
 	/********************************************************/
+	public function edit($id=null){
+		$materia = $this->Materias->get($id);
+        $this->set('materia',$materia);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $materia = $this->Materias->patchEntity($materia, $this->request->getData());
+            if ($this->Materias->save($materia)) {
+                $this->Flash->success(__('la materia ha sido modificada exitosamente.'));
 
-};  
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('la materia no pudo ser modificada. Por favor intenta de nuevo.'));
+        }
+        $carreras = $this->Materias->Carreras->find('list');
+		$this->set(compact('materia', 'carreras'));
+	}
+};  	
