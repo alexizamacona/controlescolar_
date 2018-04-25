@@ -8,8 +8,9 @@ class CarrerasController extends AppController
         $carreras = $this->Carreras->find()->contain(['Periodos']);       
         $this->set(compact('carreras'));
     }
-	public function add()
-	{
+    public function add()
+    {
+        $periodos = $this->Carreras->Periodos->find("list");
         $carrera = $this->Carreras->newEntity();
         if ($this->request->is('post')) {
             $carrera = $this->Carreras->patchEntity($carrera, $this->request->getData());
@@ -21,6 +22,7 @@ class CarrerasController extends AppController
             $this->Flash->error(__('Problemas al guardar la carrera, intentelo nuevamente.'));
         }
         $this->set(compact("carrera"));
+                $this->set(compact("periodos"));
     }
     
     public function view($id=null)

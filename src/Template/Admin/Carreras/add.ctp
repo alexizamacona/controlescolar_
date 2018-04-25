@@ -9,9 +9,9 @@ $modalidad = [
     <fieldset>
         <legend><?= __('REGISTRAR CARRERA') ?></legend>
         <?php
-            echo $this->Form->control('name');
+            echo $this->Form->control('name', ['label' => 'Nombre']);
             echo $this->Form->control('duracion');
-            echo $this->Form->control('modalidad',['options'=>$modalidad]);
+            echo $this->Form->control('periodo_id',['options'=>$periodos]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Crear'),["class"=>"btn"]) ?>
