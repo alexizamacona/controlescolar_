@@ -60,6 +60,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/admin/', ['controller' => 'Users', 'action' => 'portadadeladmin', 'prefix'=>'admin']);
+    $routes->connect('/',['controller'=> 'Users','action'=>'portadaestudiantes']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
