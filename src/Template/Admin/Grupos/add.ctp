@@ -13,9 +13,9 @@ $turnos = [
         <div class="card-panel col s12">
 
             <?php
+            echo $this->Form->control('clave');
             echo $this->Form->control('materia_id');
             echo $this->Form->control('turno',['options'=>$turnos]);
-            echo $this->Form->control('periodo_id');
             echo $this->Form->control('user_id',['label'=>'Profesor de la materia']);
             ?>
         </div>

@@ -62,7 +62,7 @@ class GruposTable extends Table
 
         $validator
             ->scalar('clave')
-            ->maxLength('clave', 50)
+            ->maxLength('clave', 50,'No puedes tener mas de 50 caracteres')
             ->requirePresence('clave', 'create')
             ->notEmpty('clave');
 
@@ -85,8 +85,7 @@ class GruposTable extends Table
     {
         $rules->add($rules->existsIn(['materia_id'], 'Materias'));
         $rules->add($rules->existsIn(['user_id'], 'Users'));
-        $rules->add($rules->existsIn(['periodo_id'], 'Periodos'));
-        $rules->add($rules->isUnique(['clave']));
+        $rules->add($rules->isUnique(['clave'],"Ya existe un grupo con esta clave, selecciona un valor diferente"));
 
         return $rules;
     }

@@ -45,4 +45,8 @@ class Grupo extends Entity
         'horarios' => true,
         'inscripciones' => true
     ];
+
+    protected function _setClave($clave){
+        return strtoupper($clave);
+    }
 }
