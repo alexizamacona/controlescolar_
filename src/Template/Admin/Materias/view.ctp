@@ -14,4 +14,6 @@
         </div>
 	</div>
 </div>
-           
+<a class="btn" href="/admin/materias/index">
+    REGRESAR
+</a>           

@@ -20,3 +20,6 @@
         </tbody>
     </table>   
 </div>
+<a class="btn" href="/admin/materias/add">
+    AGREGAR
+</a>
