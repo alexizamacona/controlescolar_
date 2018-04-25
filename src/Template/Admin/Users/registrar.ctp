@@ -27,7 +27,6 @@ $genero=[
             <h5 class ="center">Agregar Usuario</h5>
             
             <div class="col s1 "></div>
-            <div class=" col s5">
 
                 <?php
 
@@ -36,26 +35,17 @@ $genero=[
                 echo $this->Form->control('password');
                 echo $this->Form->control('nombre');
                 echo $this->Form->control('apellido_paterno');
-
-                ?>
-            </div>  
-            
-            <div class="col s5">
-                <?php 
                 echo $this->Form->control('apellido_materno');
                 echo $this->Form->control('sexo',['options'=>$genero]);
+                echo $this->Form->control('rol',['options'=>$lstRoles]);
+                echo $this->Form->control('email');
                 ?>
-                <?= $this->Form->control('rol',['options'=>$lstRoles]) ?>
-
-
-
-            <?php echo $this->Form->control('email');?>
         </div>
 
     </div>
 </div>
 <div class="button col of" style="margin-left: 81.65%;"></div>
-<button class="btn waves-effect waves-light" type="submit" name="action"> Registrar
+<button class="btn waves-effect waves-light right" type="submit" name="action"> Registrar
     <i class="material-icons right">send</i>
 </button>
 
