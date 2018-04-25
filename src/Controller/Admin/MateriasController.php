@@ -10,7 +10,9 @@ class MateriasController extends AppController
 		$materias = $this ->Materias->get($id, [
 			'contain' => ['Carreras','Grupos']
 			]);
+		$user = $this->Materias->Grupos->Users->find()->toArray();
 		$this->set('materia', $materias);
+		$this->set('maestro',$user);
 		
 	}
 	/********************************************************/

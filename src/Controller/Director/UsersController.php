@@ -24,7 +24,9 @@ class UsersController extends AppController
         $this->set('user', $user);
     }
 
+    public function portadadeldirector(){
+        $yo=$this -> Users->get($this->Auth->user('id'));
+        $this->set('yo',$yo);
 
-
-
+    }
 }

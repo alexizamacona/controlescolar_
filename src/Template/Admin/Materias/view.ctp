@@ -8,7 +8,7 @@
             <h5>Grupos:</h5>
             <?php foreach ($materia['grupos'] as $g):?>
             <tr>
-               <a href="/admin/grupos/view/<?=$g['id']?>"> <?=$g['clave']?><br></a>
+               <a href="/admin/grupos/view/<?=$g['id']?>"> <?=$g['clave']?></a> Maestro: <?=$maestro[$g['user_id']]['nombre']?><br><br>
             </tr>
             <?php endforeach; ?>
         </div>
