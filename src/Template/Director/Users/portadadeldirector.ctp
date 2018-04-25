@@ -1,0 +1,1 @@
+<h2>Bienvenido <?= h($yo->nombre_completo)?><h2>
