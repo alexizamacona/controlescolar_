@@ -24,7 +24,11 @@ class UsersController extends AppController
         $this->set('user', $user);
     }
 
-
+    public function portadadelprofesor()
+    {
+        $yo=$this->Users->get($this->Auth->user('id'));
+        $this->set(compact('yo'));
+    }
 
 
 }
