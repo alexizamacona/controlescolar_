@@ -31,7 +31,7 @@ class UsersController extends AppController
 /****************************************************/
     public function portadaestudiantes()
     {
-        $yo=$this->Users->get($this->Auth->user('id'));
+        $yo=$this->Users->get($this->Auth->user('id'),['contain'=>['Grupos'=>'Materias']]);
         $this->set(compact('yo'));
     }
 /****************************************************/
