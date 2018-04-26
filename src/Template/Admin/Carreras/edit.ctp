@@ -6,8 +6,9 @@
         echo $this->Form->control('name', ['label' => 'Nombre']);
         echo $this->Form->control('duracion');
         echo $this->Form->control("periodo");
+        echo $this->Form->button('guardar',['class'=>'btn']);
         ?>
     <?= $this->Form->end() ?>
 </div>
-<a class="btn-floating btn-large waves-effect waves-light  teal accent-4 right"  type="submit"><i class="material-icons">save</i> Guardar</a>
+
 
