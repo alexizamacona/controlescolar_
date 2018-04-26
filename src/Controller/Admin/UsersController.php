@@ -11,8 +11,7 @@ class UsersController extends AppController
 
         $this->set(compact('users'));
     }
-
-    
+/****************************************************/
     public function index()
     {
         $users = $this->paginate($this->Users);
@@ -21,7 +20,7 @@ class UsersController extends AppController
         $this->set(compact('users'));
         
     }
-
+/****************************************************/
     public function view($id = null)
     {
         $user = $this->Users->get($id, [
@@ -30,8 +29,7 @@ class UsersController extends AppController
 
         $this->set('user', $user);
     }
-
-
+/****************************************************/
     public function registrar()
     {
         $user = $this->Users->newEntity();
@@ -46,7 +44,7 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
-
+/****************************************************/
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
@@ -59,7 +57,7 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-
+/****************************************************/
     public function edit($id = null)
     {
         $user = $this->Users->get($id, [
@@ -76,5 +74,5 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
-
+/****************************************************/
 }
