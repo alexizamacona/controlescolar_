@@ -21,7 +21,7 @@
     
 
         <a href="/<?=$roldeusuario ?>" class="brand-logo center">  Control Escolar </a>
-
+         <a href="/users/logout" class="right"><i class="large material-icons">block</i></a>
 
     </nav>
     <div class="row">
