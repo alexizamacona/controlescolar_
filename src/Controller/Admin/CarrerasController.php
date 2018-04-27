@@ -5,9 +5,11 @@ use App\Controller\AppController;
 class CarrerasController extends AppController
 {
     public function index(){
-        $carreras = $this->Carreras->find()->contain(['Periodos']);       
+        $carreras = $this->Carreras->find()->contain(['Periodos']); 
+        $carreras= $this->paginate($this->Carreras);      
         $this->set(compact('carreras'));
     }
+
     public function add()
     {
         $periodos = $this->Carreras->Periodos->find("list");
@@ -21,8 +23,9 @@ class CarrerasController extends AppController
             }
             $this->Flash->error(__('Problemas al guardar la carrera, intentelo nuevamente.'));
         }
+        $carreras = $this->Carreras->find()->contain(['Periodos']); 
         $this->set(compact("carrera"));
-                $this->set(compact("periodos"));
+        $this->set(compact("periodos"));
     }
     
     public function view($id=null)
