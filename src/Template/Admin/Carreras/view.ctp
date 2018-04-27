@@ -26,3 +26,16 @@
     </div>
 </div>
 </div>
+
+<div class="row">
+    <div class="col s12">
+        <div class="card-panel">
+            <h3>Lista de materias</h3>
+            <?php foreach($carrera->materias as $m): ?>
+                <?=$m['grado']?>  
+               <a href="/admin/materias/view/<?=$m['id']?>"><?=$m['name']?></a>
+                <br>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</div>

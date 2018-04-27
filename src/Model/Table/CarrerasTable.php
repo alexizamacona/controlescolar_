@@ -36,7 +36,9 @@ class CarrerasTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-        $this->hasMany('Materias');
+        $this->hasMany('Materias',[
+            'sort'=>['grado','name']
+        ]);
         $this->belongsTo('Periodos');
     }
 
