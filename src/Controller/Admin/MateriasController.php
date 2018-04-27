@@ -16,7 +16,6 @@ class MateriasController extends AppController
 		
 	}
 	/********************************************************/
-
 	public function add() {
 		$materia = $this->Materias->newEntity();
 		if ($this->request->is('post')) {
@@ -31,9 +30,7 @@ class MateriasController extends AppController
 		$carreras = $this->Materias->Carreras->find('list');
 		$this->set(compact('materia', 'carreras'));
 	}
-
 	/********************************************************/
-
 	public function index(){
 		$materias = $this->Materias->find()
 		->contain(['Carreras'])
@@ -41,7 +38,6 @@ class MateriasController extends AppController
 
 		$this->set(compact("materias"));
 	}
-
 	/********************************************************/
 	public function edit($id=null){
 		$materia = $this->Materias->get($id);

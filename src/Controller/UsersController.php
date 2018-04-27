@@ -3,13 +3,6 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
-/**
- * Users Controller
- *
- * @property \App\Model\Table\UsersTable $Users
- *
- * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
 class UsersController extends AppController
 {
 
@@ -17,8 +10,7 @@ class UsersController extends AppController
         parent::initialize();
         $this->Auth->allow(['logout','registro','login','agregar']);
     }
-
-
+/****************************************************/
     public function login()
     {
         if ($this->request->is('post')) {
@@ -30,20 +22,19 @@ class UsersController extends AppController
             $this->Flash->error('Tu nombre de usuario o contraseña no son correctos');
         }
     }
-
+/****************************************************/
     public function logout()
     {
         $this->Auth->logout();
         $this->redirect('/');
     }
-
+/****************************************************/
     public function portadaestudiantes()
     {
-        $yo=$this->Users->get($this->Auth->user('id'));
+        $yo=$this->Users->get($this->Auth->user('id'),['contain'=>['Grupos'=>'Materias']]);
         $this->set(compact('yo'));
     }
-    
-
+/****************************************************/
     public function agregar()
     {
         $user = $this->Users->newEntity();
@@ -58,7 +49,6 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
-
-
+/****************************************************/
 
 }

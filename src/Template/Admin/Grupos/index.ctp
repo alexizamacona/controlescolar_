@@ -27,7 +27,7 @@
                             <td><?= h($grupo->user->nombre) ?></td>
                             <td>
                                 <a href=<?="/admin/grupos/view/$grupo->id"?>>Ver</a>
-                                <!--<a href=<?="/admin/grupos/edit/$grupo->id"?>>Editar</a>-->
+                                <?= $this->Html->link(__('Editar'),['action' => 'edit', $grupo->id]) ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

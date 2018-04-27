@@ -28,18 +28,21 @@ $genero=[
             
             <div class="col s1 "></div>
 
-                <?php
+            <div class="col s5">   <?php
+            
+            
+            echo $this->Form->control('nombre');
+            echo $this->Form->control('apellido_paterno');
+            echo $this->Form->control('apellido_materno');
+            echo $this->Form->control('email');
+            ?></div>
 
-
-                echo $this->Form->control('username');
-                echo $this->Form->control('password');
-                echo $this->Form->control('nombre');
-                echo $this->Form->control('apellido_paterno');
-                echo $this->Form->control('apellido_materno');
-                echo $this->Form->control('sexo',['options'=>$genero]);
-                echo $this->Form->control('rol',['options'=>$lstRoles]);
-                echo $this->Form->control('email');
-                ?>
+            <div class="col s5"><?php 
+            echo $this->Form->control('username');
+            echo $this->Form->control('password');
+            echo $this->Form->control('sexo',['options'=>$genero]);
+            echo $this->Form->control('rol',['options'=>$lstRoles]);
+            ?></div>
         </div>
 
     </div>
@@ -55,7 +58,7 @@ $genero=[
 
 
 <script>
-     $(document).ready(function(){
+   $(document).ready(function(){
     $('select').formSelect();
-  });
+});
 </script>
