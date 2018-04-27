@@ -4,7 +4,6 @@ namespace App\Controller\Admin;
 use App\Controller\AppController;
 class CarrerasController extends AppController
 {
-<<<<<<< HEAD
     public function index(){
         $carreras = $this->Carreras->find()->contain(['Periodos']); 
         $carreras= $this->paginate($this->Carreras);      
