@@ -1,4 +1,4 @@
-<h4>Portada del profesor</h4>
+<h4>PROFESOR</h4>
 <div class="card-panel">
 <h6>Calve de grupos asignados</h6>
 
