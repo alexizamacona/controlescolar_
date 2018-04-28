@@ -67,7 +67,10 @@ class CarrerasController extends AppController
 /****************************************************/
 	public function view($id=null)
 	{
-		$carrera = $this->Carreras->get($id,['contain'=>['Periodos']]);
+		$carrera = $this->Carreras->get($id,[
+			'contain'=>['Periodos','Materias'],
+			
+		]);
 		$this->set('carrera', $carrera);
 	}
 /****************************************************/
