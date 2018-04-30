@@ -11,9 +11,12 @@
                <a href="/admin/grupos/view/<?=$g['id']?>"> <?=$g['clave']?></a> Maestro: <?=$maestro[$g['user_id']]['nombre']?><br><br>
             </tr>
             <?php endforeach; ?>
+            
         </div>
 	</div>
+</div   
+<div class="row">
+    <div class="row col"><a href="/admin/materias/index" class="btn">Regresar</a></div>
+    <div class="row col"><a href="/admin/carreras" class="btn">Carreras</a></div>
+    <div class="row col"><a href="/admin/users" class="btn">Usuarios</a></div>
 </div>
-<a class="btn" href="/admin/materias/index">
-    REGRESAR
-</a>           
