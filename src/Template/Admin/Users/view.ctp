@@ -46,7 +46,10 @@
                             ['controller' => 'grupos', 'action' => 'view', 
                             $grupos->id]);?></td>
                         <td><?= h($grupos->turno) ?></td>  
-                        <td><?= h($grupos->materia->carrera->name) ?></td>
+
+                        <td>
+                        <?= $this->Html->link(h($grupos->materia->carrera->name), ['controller'=>'carreras','action'=>'view', $grupos->materia->carrera->id])?>
+                        </td>
                         <?php $bandera = $grupos->clave; }?>
 
                     </td>
