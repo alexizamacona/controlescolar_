@@ -34,7 +34,7 @@ class MateriasController extends AppController
 	public function index(){
 		$materias = $this->Materias->find()
 		->contain(['Carreras'])
-		->order(['Carreras.name','Materias.grado','Materias.name'])->group(['Carreras.id']);
+		->order(['Carreras.name','Materias.grado','Materias.name']);
 		$carreras = TableRegistry::get('Carreras')->find();
 		$this->set(compact("carreras"));
 		$this->set(compact("materias"));
