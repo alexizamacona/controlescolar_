@@ -4,11 +4,13 @@
 <div class="carreras view large-9 medium-8 columns content">
     <div class="row">
         <div class="card-panel">
-            <h4><th scope="row"><?= __('Grupo') ?></th>  </h4>
+            <h4><th scope="row"><?= __('Grupo') ?></th></h4>
             <table>
                 <tr>
                     <th scope="row"><?= __('Materia') ?></th>
-                    <td><?= h($grupo->materia->name) ?></td>
+                    <td><a href="/admin/materias/view/<?=$grupo->materia->id?>"><?= h($grupo->materia->name) ?>
+                    </a>
+                    </td>
                 </tr>
                 <tr>
                     <th scope="row"><?= __('Clave') ?></th>
@@ -20,7 +22,8 @@
                 </tr>
                 <tr>
                     <th scope="row"><?= __('Nombre del profesor') ?></th>
-                    <td><?= h($grupo->user->nombre_completo) ?>  
+                    <td><a href="/admin/users/view/<?=$grupo->user->id?>"><?= h($grupo->user->nombre_completo) ?>
+                    </a>
                     </td>
                 </tr>
                 <tr> 
@@ -28,16 +31,6 @@
                         <div class = 'center'>
                             <?= $this->Html->link(__('Editar'),['action' => 'edit', $grupo->id]) ?>  
                         </div> 
-                    </td>
-                    <td>
-                        <div class = 'rigth'>
-                            <a href="/admin/materias" class="btn">Materias</a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class = 'left'>
-                            <a href="/admin/users" class="btn">Usuarios</a>
-                        </div>
                     </td>
                 </tr>
             </table>
