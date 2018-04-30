@@ -26,7 +26,17 @@
                 <tr> 
                     <td>
                         <div class = 'center'>
-                            <?= $this->Html->link(__('Editar'),['action' => 'edit', $grupo->id]) ?>   
+                            <?= $this->Html->link(__('Editar'),['action' => 'edit', $grupo->id]) ?>  
+                        </div> 
+                    </td>
+                    <td>
+                        <div class = 'rigth'>
+                            <a href="/admin/materias" class="btn">Materias</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class = 'left'>
+                            <a href="/admin/users" class="btn">Usuarios</a>
                         </div>
                     </td>
                 </tr>
