@@ -1,11 +1,11 @@
-<h4>PROFESOR</h4>
+<h4>Bienvenido profesor <?= $profesor->nombre_completo?></h4>
 <div class="card-panel">
-<h6>Calve de grupos asignados</h6>
+	<h6>Clave de grupos asignados</h6>
 
 
-<?php
+	<?php
 	$grupos=$profesor->grupos;
 	foreach ($grupos as $grupo){
-			echo $grupo->clave;}
-?>
-</div>
+		echo $grupo->clave;}
+		?>
+	</div>
