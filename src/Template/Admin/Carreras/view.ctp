@@ -1,12 +1,12 @@
 <?php
 /**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\Pelicula $pelicula
- */
+* @var \App\View\AppView $this
+* @var \App\Model\Entity\Pelicula $pelicula
+*/
 ?>
 <div class="row">
     <div class="card-panel">
-     <div class="carreras view large-9 medium-8 columns content">
+       <div class="carreras view large-9 medium-8 columns content">
         <table class="vertical-table">
             <tr>
                 <th scope="row"><?= __('Nombre') ?></th>
@@ -20,11 +20,12 @@
                 <th scope="row"><?= __('Modalidad') ?></th>
                 <td><?= h($carrera->periodo->tipo) ?></td>
             </tr>
-        </table>
-        <br>
-        <a class="waves-effect waves-light btn " href=<?="/admin/carreras/edit/$carrera->id"?>><i class="material-icons left">edit</i>Editar</a>
+            </table>
+            <br>
+            <a class="waves-effect waves-light btn " href=<?="/admin/carreras/edit/$carrera->id"?>><i class="material-icons left">edit</i>Editar</a>
+             <a class="waves-effect waves-light btn " href=<?="/admin/materias/add/$carrera->id"?>><i class="material-icons left">edit</i>Agregar</a>
+        </div>
     </div>
-</div>
 </div>
 
 <div class="row">
@@ -33,7 +34,7 @@
             <h3>Lista de materias</h3>
             <?php foreach($carrera->materias as $m): ?>
                 <?=$m['grado']?>  
-               <a href="/admin/materias/view/<?=$m['id']?>"><?=$m['name']?></a>
+                <a href="/admin/materias/view/<?=$m['id']?>"><?=$m['name']?></a>
                 <br>
             <?php endforeach; ?>
         </div>
