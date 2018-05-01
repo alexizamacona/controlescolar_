@@ -27,8 +27,9 @@ class UsersController extends AppController
     public function portadadeldirector(){
         $yo=$this -> Users->get($this->Auth->user('id'));
         $this->set('yo',$yo);
-        $Carreras=$this->Users->Grupos->Materias->Carreras->find('all');
+        $Carreras=$this->Users->Grupos->Materias->Carreras->find('all',array('order'=>'name'));
         $this->set('Carreras',$Carreras);
+
 
     }
 }
