@@ -2,7 +2,7 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
-
+use Cake\ORM\TableRegistry;
 class MateriasController extends AppController
 {	
 	public function view($id)
@@ -35,7 +35,8 @@ class MateriasController extends AppController
 		$materias = $this->Materias->find()
 		->contain(['Carreras'])
 		->order(['Carreras.name','Materias.grado','Materias.name']);
-
+		$carreras = TableRegistry::get('Carreras')->find();
+		$this->set(compact("carreras"));
 		$this->set(compact("materias"));
 	}
 	/********************************************************/
