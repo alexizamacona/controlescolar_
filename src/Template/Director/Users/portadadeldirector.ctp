@@ -1,2 +1,9 @@
 <h2>Bienvenido <?= h($yo->nombre_completo)?></h2>
-<li><?=h($yo->materias)?></li>
+<div class="card-panel">
+<h6>Lista de carreras<h6/><br>
+<?php foreach($Carreras as $carrera): ?>
+                  
+                <?=$carrera['name']?>
+                <br>
+            <?php endforeach; ?>
+</div>
