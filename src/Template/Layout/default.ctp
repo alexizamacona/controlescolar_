@@ -44,6 +44,11 @@
   $(document).ready(function(){
     $('.tabs').tabs();
 
+    if ("<?=$roldeusuario?>" == 'admin') { $("body").css('background','url(/img/a.png)')}
+    if ("<?=$roldeusuario?>" == 'director') { $("body").css('background','url(/img/d.png)')}
+    if ("<?=$roldeusuario?>" == 'profesor') { $("body").css('background','url(/img/p.png)')}
+    if ("<?=$roldeusuario?>" == 'estudiante') { $("body").css('background','url(/img/e.png)')}
+
 });
   
 </script>
