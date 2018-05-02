@@ -28,11 +28,14 @@
         </tr>
 
         <tr> 
+
+            <?php if($id_login == $grupo->user->id): ?>
             <td>
                 <div class = 'center'>
-                    <?= $this->Html->link(__('Editar'),['action' => 'edit', $grupo->id]) ?>  
-                </div> 
+                    <?= $this->Html->link(__('Asignar actividad'),['controller'=>'actividades','action' => 'crear', $grupo->id]) ?>  
+                </div>
             </td>
+            <?php endif; ?>
         </tr>
     </table>
 </div>
