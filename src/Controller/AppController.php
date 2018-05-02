@@ -59,7 +59,8 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
-        $this->set('roldeusuario',$this->Auth->user("rol") );
+        $this->set('roldeusuario',$this->Auth->user("rol"));
+        $this->set('nombredeusuario',$this->Auth->user("nombre"));
     }
 
 
