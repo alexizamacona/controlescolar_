@@ -2,13 +2,6 @@
 ?>
 
 <h4>Bienvenido <?= h($yo->nombre_completo) ?></h4>
-
-
-
-<ul id="tabs-swipe-demo" class="tabs">
-    <li class="tab col s3"><a href="#test-swipe-1">Materias</a></li>
-
-  </ul>
   <div id="test-swipe-1" class="col s12 white">
     <div class="card-panel">
         <div class="users index large-9 medium-8 columns content-4">
