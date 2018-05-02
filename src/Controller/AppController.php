@@ -48,7 +48,7 @@ class AppController extends Controller
                 'controller'=>'Users',
                 'action'=>'login',
                 'prefix'=>false,
-            ],
+            ],'authorize'=>'Controller'
         ]);
 
         $this->Auth->allow(['login','logout','registrar']);
@@ -61,6 +61,25 @@ class AppController extends Controller
         //$this->loadComponent('Csrf');
         $this->set('roldeusuario',$this->Auth->user("rol") );
         $this->set('id_login', $this->Auth->user("id"));
+    }
+
+    public function isAuthorized($user=null){
+        if (!$this->request->getParam('prefix')) {
+            return true;
+        }
+
+        // Only admins can access admin functions
+        if ($this->request->getParam('prefix') === 'admin') {
+            return (bool)($user['rol'] === 'admin');
+        }
+        if ($this->request->getParam('prefix') === 'director') {
+            return (bool)($user['rol'] === 'director');
+        }
+        if ($this->request->getParam('prefix') === 'profesor') {
+            return (bool)($user['rol'] === 'profesor');
+        }
+        // Default deny
+        return false;
     }
 
 
