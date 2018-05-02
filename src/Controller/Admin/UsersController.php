@@ -75,4 +75,8 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 /****************************************************/
+ public function lista(){
+        $users = $this->Users->get($name);
+        $this->set('user',$user);
+    }
 }
