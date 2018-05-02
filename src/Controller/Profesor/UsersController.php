@@ -26,9 +26,11 @@ class UsersController extends AppController
     }
     /****************************************************/
     public function portadadelprofesor()
-    {
+    {   
         $yo=$this->Users->get($this->Auth->user('id'));
-        $this->set(compact('yo'));
+        $profesor=$this->Users->get($yo->id,['contain'=>['Grupos']]);
+        $profesor=$this->Users->get($this->Auth->user('id'),['contain'=>['Grupos']]);
+        $this->set(compact('yo','profesor'));
     }
     /****************************************************/
 }

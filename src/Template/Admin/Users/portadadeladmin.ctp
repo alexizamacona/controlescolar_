@@ -41,6 +41,11 @@ foreach($users as $user):
 					<h5>Total de directores</h5>
 					<h5><?=$director?></h5>	
 				</div>
+				<div class="row">
+					<div class="row col"><a href="/admin/carreras" class="btn">Carreras</a></div>
+					<div class="row col"><a href="/admin/Grupos" class="btn">Grupos</a></div>
+					<div class="row col"><a href="/admin/users" class="btn">Usuarios</a></div>
+				</div>
 			</div>
 
 			<div id="canvas-container" style="width:50%;">

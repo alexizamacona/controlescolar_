@@ -26,13 +26,6 @@
                     </a>
                     </td>
                 </tr>
-                <tr> 
-                    <td>
-                        <div class = 'center'>
-                            <?= $this->Html->link(__('Editar'),['action' => 'edit', $grupo->id]) ?>  
-                        </div> 
-                    </td>
-                </tr>
             </table>
         </div>
     </div>
