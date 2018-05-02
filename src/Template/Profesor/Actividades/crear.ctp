@@ -1,17 +1,28 @@
 <?php 
 $grupo = $grupos;
 ?>
+
 <?= $this->Form->create($actividad) ?>
 <div class="card-panel">
+
+			<?= $this->form->hidden('grupo_id', ['default'=>$id_grupo])?></input>
+
 	<?= $this->form->control('descripcion',['label'=>'Descripción'])?>
-	<?= $this->form->control('grupo_id',['options'=>$grupo])?>
 	<?= $this->form->control('porcentaje',['type'=>'number'])?>
-	<?= $this->form->control('calificacion',['type'=>'number'],['default'=>'0'])?>	
-	<?= $this->form->control('fecha',['type'=>'date'],['label'=>' '])?>	
+
+	<?= $this->Form->hidden('calificacion',['defaul' => '0'])?>
+	<div class="">
+		<?= $this->form->control('fecha',['type' => 'date'])?>	
+	</div>
 
 </div>
-	<button class="btn waves-effect waves-light right" type="submit" name="action"> Crear
-		<i class="material-icons right">send</i>
-	</button>
-	<?= $this->Form->end() ?>
+<button class="btn waves-effect waves-light right" type="submit" name="action"> Crear
+	<i class="material-icons right">send</i>
+</button>
+<?= $this->Form->end() ?>
 
+<script>
+	$(document).ready(function(){
+		$('.datepicker').datepicker();
+	});
+</script>
