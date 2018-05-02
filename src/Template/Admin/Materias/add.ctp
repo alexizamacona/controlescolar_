@@ -1,7 +1,6 @@
 	<div class="col s6 offset-s3">
 		<div class="card-panel hoverize">
-			<?php
-				echo $this->Form->create();
+			<?php echo $this->Form->create()
 				echo $this->Form->control('name',['label'=>'Nombre']);
 				echo '<div class="input-field">'.$this->Form->control('carrera_id',['options'=> $carreras,'class'=>'browser-default']).'</div>';
 				echo $this->Form->control('grado');
