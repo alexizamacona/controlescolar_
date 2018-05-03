@@ -23,8 +23,8 @@
             </table>
             <br>
             <a class="waves-effect waves-light btn " href=<?="/admin/carreras/edit/$carrera->id"?>><i class="material-icons left">edit</i>Editar</a>
-             <a class="waves-effect waves-light btn " href=<?="/admin/materias/add/$carrera->id"?>><i class="material-icons left">edit</i>Agregar Semestral</a>
-             <a class="waves-effect waves-light btn " href=<?="/admin/materias/add/$carrera->id"?>><i class="material-icons left">edit</i>Agregar Cuatrimestral</a>
+             <a class="waves-effect waves-light btn " href=<?="/admin/materias/add/$carrera->id"?>><i class="material-icons left">edit</i>Agregar </a>
+
         </div>
     </div>
 </div>
