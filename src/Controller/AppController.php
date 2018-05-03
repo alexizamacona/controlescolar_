@@ -73,10 +73,10 @@ class AppController extends Controller
             return (bool)($user['rol'] === 'admin');
         }
         if ($this->request->getParam('prefix') === 'director') {
-            return (bool)($user['rol'] === 'director');
+            return (bool)($user['rol'] === 'director' OR $user['rol'] === 'admin');
         }
         if ($this->request->getParam('prefix') === 'profesor') {
-            return (bool)($user['rol'] === 'profesor');
+            return (bool)($user['rol'] === 'profesor' OR $user['rol'] === 'admin' OR $user['rol'] === 'director');
         }
         // Default deny
         return false;
