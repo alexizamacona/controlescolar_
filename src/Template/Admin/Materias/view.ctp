@@ -29,5 +29,5 @@
 </div >  
     <div class="row">
         <col><div class="row col"><a href="/admin/materias/index" class="btn">Regresar</a></div>
-        <col><a href="/admin/grupos/add" class="btn">Agregar nuevo grupo</a>
+        <col><a href="/admin/grupos/add" class="btn blue lighten-1">Agregar nuevo grupo</a>
     </div>
