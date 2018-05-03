@@ -16,11 +16,7 @@
 
     	}
     }
-namespace App\Controller\Director;
-
-use App\Controller\AppController;
-
-class MateriasController extends AppController
+class MateriaController extends AppController
 {
 	public function view ($id = null){
 		$materias = $this ->Materias->get($id, [

@@ -17,15 +17,8 @@
      </tr>
  <?php endforeach; ?>
     </div>
-</div>
-</div > 
-    <h3><?=$materia['name']?></h1>
-    <h5>Grado:</h5><?=$materia['grado']?>
-    <h5>Creditos:</h5><?=$materia['creditos']?>
-   
-</div>
-
-<div class="row">
+    </div>
+<div class="col s6">
     <div class="card-panel">
         <h5>Grupos:</h5>
         <?php foreach ($materia['grupos'] as $g):?>
@@ -39,14 +32,13 @@
      <?php endforeach; ?>
  </div>
 </div>
-
+</div > 
+    <h3>Materia:</h3><?=$materia['name']?>
+    <h5>Grado:</h5><?=$materia['grado']?>
+    <h5>Creditos:</h5><?=$materia['creditos']?>
+</div>
 
 </div >  
-
-
-
-
-
 <div class="row">
     <div class="row col"><a href="/director/materias/index" class="btn">Regresar</a></div>
 </div>
