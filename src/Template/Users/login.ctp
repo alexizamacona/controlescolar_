@@ -9,7 +9,7 @@
 	<?=$this->Form->create()?>
 	<?=$this->Form->control("username")?>
 	<?=$this->Form->control("password")?>
-	<?=$this->Form->button("Entrar")?>
+	<?=$this->Form->button("Entrar",["class"=>"btn green"])?>
 	<?=$this->Form->end()?>
 </div>
 

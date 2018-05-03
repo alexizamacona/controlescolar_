@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
+$gruposal = $user->inscripciones;
  $bandera = '';
 ?>
 <div class="card-panel">
@@ -28,8 +29,8 @@
 
 
     <div class="related">
+        <?php if (!empty($user->inscripciones)): ?>
         <h5><?= __('Grupos') ?></h5>
-        <?php if (!empty($user->grupos)): ?>
             <table cellpadding="0" cellspacing="0" >
                 <tr>
                     
@@ -39,15 +40,17 @@
                     <th scope="col"><?= __('Carrera') ?></th>
                     
                 </tr>
-                <?php foreach ($user->grupos as $grupos): 
-                        if($bandera != $grupos->clave){?>
+                <?php foreach ($gruposal as $g): ?>
+                        
                     <tr>
-                        <td><?= $this->Html->link(h($grupos->clave),
+                        
+                        <td><?= $this->Html->link(h($g->grupo->clave),
                             ['controller' => 'grupos', 'action' => 'view', 
-                            $grupos->id]);?></td>
-                        <td><?= h($grupos->turno) ?></td>  
-                        <td><?= h($grupos->materia->carrera->name) ?></td>
-                        <?php $bandera = $grupos->clave; }?>
+                            $g->id]);?></td>
+                        <td><?=$g->grupo->turno?></td>
+                        <td><?= $this->Html->link(h($g->grupo->materia->carrera->name),
+                            ['controller' => 'grupos', 'action' => 'view', 
+                            $g->id]);?></td>
 
                     </td>
                 </tr>
