@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col s6">
         <div class="card-panel">
-         <h5> Name:</h5> <?=$materia['name']?><br>
+         <h5> Nombre:</h5> <?=$materia['name']?><br>
          <h5>Carrera:</h5>
 
          <a href="/admin/carreras/view/<?=$materia['carrera']['id']?>">
