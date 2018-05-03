@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
     namespace App\Controller\Director;
 
     use App\Controller\AppController;
@@ -17,7 +16,6 @@
 
     	}
     }
-=======
 namespace App\Controller\Director;
 
 use App\Controller\AppController;
@@ -33,4 +31,3 @@ class MateriasController extends AppController
 		$this->set('maestro',$user);
 	}
 }
->>>>>>> d32e993206aba1d875986af491f05597558e8b02

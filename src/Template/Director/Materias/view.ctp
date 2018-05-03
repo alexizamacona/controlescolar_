@@ -1,5 +1,4 @@
 <div class="row">
-<<<<<<< HEAD
     <div class="col s6">
         <div class="card-panel">
          <h5>Nombre:</h5><?=$materia['name']?></a><br>
@@ -20,7 +19,6 @@
     </div>
 </div>
 </div > 
-=======
     <h3><?=$materia['name']?></h1>
     <h5>Grado:</h5><?=$materia['grado']?>
     <h5>Creditos:</h5><?=$materia['creditos']?>
@@ -52,4 +50,4 @@
 <div class="row">
     <div class="row col"><a href="/director/materias/index" class="btn">Regresar</a></div>
 </div>
->>>>>>> d32e993206aba1d875986af491f05597558e8b02
+
