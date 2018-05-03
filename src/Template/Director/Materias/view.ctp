@@ -32,12 +32,6 @@
      <?php endforeach; ?>
  </div>
 </div>
-</div > 
-    <h3>Materia:</h3><?=$materia['name']?>
-    <h5>Grado:</h5><?=$materia['grado']?>
-    <h5>Creditos:</h5><?=$materia['creditos']?>
-</div>
-
 </div >  
 <div class="row">
     <div class="row col"><a href="/director/materias/index" class="btn">Regresar</a></div>
