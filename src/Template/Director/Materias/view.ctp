@@ -25,8 +25,7 @@
             <tr>
              Clave: <a href="/director/grupos/view/<?=$g['id']?>"><?=$g['clave']?></a>
 
-             Docente: <a href="/director/users/view/<?=$maestro[$g['user_id']]['id']?>"><?= h($maestro[$g['user_id']]['nombre']) ?>
-             </a>
+             Docente: <a href="/director/users/view/<?php print_r($g->user['id']) ?>"><?php print_r($g->user['nombre']) ?></a> 
              <br>
          </tr>
      <?php endforeach; ?>

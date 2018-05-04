@@ -19,8 +19,7 @@
             <tr>
              Grupo: <a href="/admin/grupos/view/<?=$g['id']?>"><?=$g['clave']?></a>
 
-             Maestro: <a href="/admin/users/view/<?=$maestro[$g['user_id']]['id']?>"><?= h($maestro[$g['user_id']]['nombre']) ?>
-         </a>
+             Maestro: <a href="/director/users/view/<?php print_r($g->user['id']) ?>"><?php print_r($g->user['nombre']) ?></a>
          <br>
      </tr>
  <?php endforeach; ?>
