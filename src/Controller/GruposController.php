@@ -7,7 +7,7 @@ use App\Controller\AppController;
     {
     	public function view($id){
     		$calif = $this->Grupos->get($id,[
-    			'contain' => ['Actividades']]);
+    			'contain' => ['Actividades'=>['Users'], 'materias']]);
     		$this->set('calif', $calif);
     	}
     }
