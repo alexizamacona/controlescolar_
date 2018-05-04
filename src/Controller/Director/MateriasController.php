@@ -8,12 +8,9 @@
     	public function view($id)
     	{
     		$materias = $this ->Materias->get($id, [
-    			'contain' => ['Carreras','Grupos']
+    			'contain' => ['Carreras','Grupos'=>['Users']]
     			]);
-    		$user = $this->Materias->Grupos->Users->find()->toArray();
     		$this->set('materia', $materias);
-    		$this->set('maestro',$user);
-
     	}
     }
 class MateriaController extends AppController
