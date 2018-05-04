@@ -37,14 +37,8 @@ class ActividadesTable extends Table
         $this->setDisplayField('descripcion');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Grupos', [
-            'foreignKey' => 'grupo_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
-        ]);
+        $this->belongsTo('Grupos');
+        $this->belongsTo('Users');
     }
 
     /**
