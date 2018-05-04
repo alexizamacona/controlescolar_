@@ -37,13 +37,8 @@ class MateriasTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Carreras', [
-            'foreignKey' => 'carrera_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->hasMany('Grupos', [
-            'foreignKey' => 'materia_id'
-        ]);
+        $this->belongsTo('Carreras');
+        $this->hasMany('Grupos');
     }
 
     /**

@@ -36,10 +36,7 @@ class ParcialesTable extends Table
         $this->setDisplayField('descripcion');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Periodos', [
-            'foreignKey' => 'periodo_id',
-            'joinType' => 'INNER'
-        ]);
+        $this->belongsTo('Periodos');
     }
 
     /**

@@ -37,13 +37,8 @@ class HorariosTable extends Table
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Grupos', [
-            'foreignKey' => 'grupo_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->hasMany('Asistencias', [
-            'foreignKey' => 'horario_id'
-        ]);
+        $this->belongsTo('Grupos');
+        $this->hasMany('Asistencias');
     }
 
     /**

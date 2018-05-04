@@ -59,8 +59,12 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
-        $this->set('roldeusuario',$this->Auth->user("rol") );
         $this->set('id_login', $this->Auth->user("id"));
+        $this->set('m_login',$this->Auth->user("apellido_materno"));    
+        $this->set('nombre_login',$this->Auth->user("nombre"));
+        $this->set('nombredeusuario',$this->Auth->user("nombre"));
+        $this->set('p_login',$this->Auth->user("apellido_paterno"));
+        $this->set('roldeusuario',$this->Auth->user("rol"));
     }
 
     public function isAuthorized($user=null){
@@ -73,10 +77,10 @@ class AppController extends Controller
             return (bool)($user['rol'] === 'admin');
         }
         if ($this->request->getParam('prefix') === 'director') {
-            return (bool)($user['rol'] === 'director');
+            return (bool)($user['rol'] === 'director' OR $user['rol'] === 'admin');
         }
         if ($this->request->getParam('prefix') === 'profesor') {
-            return (bool)($user['rol'] === 'profesor');
+            return (bool)($user['rol'] === 'profesor' OR $user['rol'] === 'admin' OR $user['rol'] === 'director');
         }
         // Default deny
         return false;

@@ -5,12 +5,11 @@ use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 class MateriasController extends AppController
 {	
-	public function view($id)
+	public function view($id=null)
 	{
-		$materias = $this ->Materias->get($id, [
-			'contain' => ['Carreras','Grupos']
+		$materias = $this->Materias->get($id, [
+			'contain' => ['Carreras','Grupos'=>['Users']]
 			]);
-		$user = $this->Materias->Grupos->Users->find()->toArray();
 		$this->set('materia', $materias);
 		$this->set('maestro',$user);
 		
