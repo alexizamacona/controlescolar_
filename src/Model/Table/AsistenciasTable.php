@@ -37,14 +37,8 @@ class AsistenciasTable extends Table
         $this->setDisplayField('user_id');
         $this->setPrimaryKey('id');
 
-        $this->belongsTo('Users', [
-            'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Horarios', [
-            'foreignKey' => 'horario_id',
-            'joinType' => 'INNER'
-        ]);
+        $this->belongsTo('Users');
+        $this->belongsTo('Horarios');
     }
 
     /**

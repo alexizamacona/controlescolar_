@@ -39,18 +39,10 @@ class UsersTable extends Table
         $this->setDisplayField('nombre_completo');
         $this->setPrimaryKey('id');
 
-        $this->hasMany('Actividades', [
-            'foreignKey' => 'user_id'
-        ]);
-        $this->hasMany('Asistencias', [
-            'foreignKey' => 'user_id'
-        ]);
-        $this->hasMany('Grupos', [
-            'foreignKey' => 'user_id'
-        ]);
-        $this->hasMany('Inscripciones', [
-            'foreignKey' => 'user_id'
-        ]);
+        $this->hasMany('Actividades');
+        $this->hasMany('Asistencias');
+        $this->hasMany('Grupos');
+        $this->hasMany('Inscripciones');
     }
 
     /**

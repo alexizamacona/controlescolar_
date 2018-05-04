@@ -6,7 +6,7 @@
 ?>
 <div class="row">
     <div class="card-panel">
-     <div class="carreras view large-9 medium-8 columns content">
+       <div class="carreras view large-9 medium-8 columns content">
         <table class="vertical-table">
             <tr>
                 <th scope="row"><?= __('Nombre') ?></th>
@@ -31,16 +31,12 @@
 
 <div class="row">
     <div class="card-panel">
-     <div class="carreras view large-9 medium-8 columns content">
-        <table class="vertical-table">
-            <tr>
-                <th scope="row"><?= __('Lista de materias') ?></th>
-                <td><?php foreach($carrera->materias as $m): ?>
-                    <?=$m['grado']?>  
-                    <a href="/admin/materias/view/<?=$m['id']?>"><?=$m['name']?></a>
-                <?php endforeach; ?></td>
-            </tr>
-            <tr>
-             
+    <?= __('Lista de materias') ?><br>
+       <?php foreach($carrera->materias as $m): ?>
+        <div class="linea">
+            <?=$m['grado']?>  
+            <a href="/admin/materias/view/<?=$m['id']?>"><?=$m['name']?></a>
+        </div><br>
+    <?php endforeach; ?>          
 
-            </div>
+</div>

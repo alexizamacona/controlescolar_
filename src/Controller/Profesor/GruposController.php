@@ -24,5 +24,8 @@ class GruposController extends AppController
 			])->toArray();
 		$this->set('grupo', $grupo);
 
+		$alumnos=$this->Grupos->get($id, ['contain'=>['inscripciones' => ['users']]]);
+		$this->set('grupo', $grupo);
+		$this->set('alumnos', $alumnos);
 	}
 }

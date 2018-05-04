@@ -33,4 +33,5 @@ class UsersController extends AppController
         $this->set(compact('yo','profesor'));
     }
     /****************************************************/
+    
 }

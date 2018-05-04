@@ -11,5 +11,3 @@
 <?php foreach ($grupo['inscripciones'] as $i): ?>
 	<?php echo $i['user']['apellido_paterno']; ?>
 <?php endforeach; ?>
-<?php
-debug($grupo);
