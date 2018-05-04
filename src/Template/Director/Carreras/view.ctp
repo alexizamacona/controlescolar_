@@ -8,7 +8,7 @@
 	<?php foreach($materia->grupos as $grupo):?>
 		<div class="col s6">
 
-			<a href=<?="/director/users/view/$grupo->user_id"?>><?=$grupo->clave?></a>
+			<a href=<?="/director/grupos/view/$grupo->id"?>><?=$grupo->clave?></a>
 			<hr>
 		</div>
 		<div class="col s6">
