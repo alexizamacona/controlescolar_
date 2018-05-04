@@ -1,15 +1,7 @@
-<?php
-?>
 
 <h4>Bienvenido <?= h($yo->nombre_completo) ?></h4>
-
-
-
-<ul id="tabs-swipe-demo" class="tabs">
-    <li class="tab col s3"><a href="#test-swipe-1">Materias</a></li>
-
-  </ul>
-  <div id="test-swipe-1" class="col s12 white">
+<div id="test-swipe-1" class="col s12 white">
+    <div id="test-swipe-1" class="col s12 white">
     <div class="card-panel">
         <div class="users index large-9 medium-8 columns content-4">
             <h3><?= __('Historial de materias') ?></h3>
@@ -20,24 +12,27 @@
                         <th scope="col">Materia</th>
                         <th scope="col">Grado</th>
                         <th scope="col">Creditos</th>
+                        <th scope="col">Grupo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($yo as $usuario): ?>
+                    <?php foreach ($yo->inscripciones as $usuario): ?>
+                        
 
-                        <tr>
-
-                            <td><?= h($usuario->grupos->materias->name) ?></td>
-                            <td><?= h($usuario->grupos->materias->grado) ?></td>
-                            <td><?= h($usuario->grupos->materias->creditos) ?></td>
-                        </tr>
+                            <tr>
+                                <td><?php print_r(h($usuario->grupo->materia['name'])) ?></td>
+                                <td><?php print_r(h($usuario->grupo->materia['grado'])) ?></td>
+                                <td><?php print_r(h($usuario->grupo->materia['creditos'])) ?></td>
+                                <td><?php print_r(h($usuario->grupo['clave'])) ?></td>
+                                
+                            </tr>
                         <?php  endforeach; ?>
+                        
                     </tbody>
                 </table>
+            
 
-            </div>
-        </div>
-      
+    </div>
+</div>
 
-  </div>
-  
+

@@ -36,7 +36,7 @@
                     </tbody>
                 </table>
                 <a class="waves-effect waves-light btn " href=<?="/admin/materias/add/$carrera->id"?>><i class="material-icons left">edit</i>Agregar Semestral</a>
-                <a class="waves-effect waves-light btn " href=<?="/admin/materias/add/$carrera->id"?>><i class="material-icons left">edit</i>Agregar Cuatrimestral </a>
+                
             </div>
         </div>
     </div>
@@ -68,7 +68,7 @@
                             <?php  } endforeach; ?>
                         </tbody>
                     </table>
-
+                     <a class="waves-effect waves-light btn " href=<?="/admin/materias/add/$carrera->id"?>><i class="material-icons left">edit</i>Agregar Cuatrimestral </a>
                 </div>
             </div>
         </div>

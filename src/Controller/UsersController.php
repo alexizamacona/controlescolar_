@@ -10,31 +10,37 @@ class UsersController extends AppController
         parent::initialize();
         $this->Auth->allow(['logout','registro','login','agregar']);
     }
-/****************************************************/
+    /****************************************************/
     public function login()
     {
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
+                if($user['rol']!='estudiante'){
+                    return $this->redirect($this->Auth->redirectUrl("/$user[rol]"));
+                }
+                else{
+                    return $this->redirect($this->Auth->redirectUrl("/"));
+                }
             }
             $this->Flash->error('Tu nombre de usuario o contraseña no son correctos');
         }
     }
-/****************************************************/
+    /****************************************************/
     public function logout()
     {
         $this->Auth->logout();
         $this->redirect('/');
     }
-/****************************************************/
+    /****************************************************/
     public function portadaestudiantes()
     {
         $yo=$this->Users->get($this->Auth->user('id'),['contain'=>['Grupos'=>'Materias']]);
+        $yo=$this->Users->get($this->Auth->user('id'),['contain'=>['Inscripciones'=>['Grupos'=>['Materias']]]]);    
         $this->set(compact('yo'));
     }
-/****************************************************/
+    /****************************************************/
     public function agregar()
     {
         $user = $this->Users->newEntity();
@@ -49,6 +55,13 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
-/****************************************************/
+    /****************************************************/
+    public function lista(){
+
+
+    }
+
+
+
 
 }

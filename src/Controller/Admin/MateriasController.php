@@ -16,7 +16,7 @@ class MateriasController extends AppController
 		
 	}
 	/********************************************************/
-	public function add() {
+	public function add($id) {
 		$materia = $this->Materias->newEntity();
 		if ($this->request->is('post')) {
 			$materia = $this->Materias->patchEntity($materia, $this->request->getData());
@@ -28,7 +28,7 @@ class MateriasController extends AppController
 			$this->Flash->error(__('The materia could not be saved. Please, try again.'));
 		}
 		$carreras = $this->Materias->Carreras->find('list');
-		$this->set(compact('materia', 'carreras'));
+		$this->set(compact('materia', 'carreras','id'));
 	}
 	/********************************************************/
 	public function index(){
