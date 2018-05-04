@@ -1,9 +1,8 @@
 <?php
-$grupos=[];
 ?>
 
 <h4>Bienvenido <?= h($yo->nombre_completo) ?></h4>
-<div id="test-swipe-1" class="col s12 white">
+  <div id="test-swipe-1" class="col s12 white">
     <div class="card-panel">
         <div class="users index large-9 medium-8 columns content-4">
             <h3><?= __('Historial de materias') ?></h3>
@@ -14,25 +13,24 @@ $grupos=[];
                         <th scope="col">Materia</th>
                         <th scope="col">Grado</th>
                         <th scope="col">Creditos</th>
-                        <th scope="col">Grupo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($yo->inscripciones as $usuario): ?>
+                    <?php foreach ($yo as $usuario): ?>
 
                         <tr>
 
-                            <td><?php print_r(h($usuario->grupo->materia['name'])) ?></td>
-                            <td><?php print_r(h($usuario->grupo->materia['grado'])) ?></td>
-                            <td><?php print_r(h($usuario->grupo->materia['creditos'])) ?></td>
-                            <td><?php print_r(h($usuario->grupo['clave']))?></td>
+                            <td><?= h($usuario->grupos->materias->name) ?></td>
+                            <td><?= h($usuario->grupos->materias->grado) ?></td>
+                            <td><?= h($usuario->grupos->materias->creditos) ?></td>
                         </tr>
-                    <?php  endforeach; ?>
-                </tbody>
-            </table>
+                        <?php  endforeach; ?>
+                    </tbody>
+                </table>
 
+            </div>
         </div>
-    </div>
+      
 
-
-</div>
+  </div>
+  
