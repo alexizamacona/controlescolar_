@@ -8,4 +8,5 @@
 	foreach ($grupos as $grupo){
 		echo $grupo->clave;}
 		?>
+<a class="waves-effect waves-light btn " href=<?="/profesor/grupos"?>><i class="material-icons left">edit</i>Grupos </a>
 	</div>
