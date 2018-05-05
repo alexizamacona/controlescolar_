@@ -8,7 +8,7 @@ class GruposController extends AppController
 	public function view($id=null)
 	{
 		$grupo = $this->Grupos->get($id, [
-			'contain' => ['Users', 'Materias','Actividades']
+			'contain' => ['inscripciones'=>['Users'], 'Materias','Actividades']
 			]);
 
 		$this->set('grupo', $grupo);
@@ -29,8 +29,10 @@ class GruposController extends AppController
 		$this->set('grupo', $grupo);
 		$this->set('alumnos', $alumnos);
 	}
-	public function asistencia()
+	public function asistencia($id)
 	{
-
+		$asistencias = $this->Grupos->get($id, [
+			'contain' => ['Inscripciones'=>['Users'=>['Asistencias'=>'Horarios'],'Grupos']]]);
+		$this->set(compact('asistencias'));
 	}
 }
