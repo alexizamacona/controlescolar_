@@ -28,4 +28,8 @@ class GruposController extends AppController
 		$this->set('grupo', $grupo);
 		$this->set('alumnos', $alumnos);
 	}
+	public function asistencia()
+	{
+
+	}
 }
