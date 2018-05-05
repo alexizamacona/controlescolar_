@@ -8,7 +8,7 @@ class GruposController extends AppController
 	public function view($id=null)
 	{
 		$grupo = $this->Grupos->get($id, [
-			'contain' => ['inscripciones'=>['Users'], 'Materias','Actividades']
+			'contain' => ['inscripciones'=>['Users'], 'Materias','Actividades','Users']
 			]);
 
 		$this->set('grupo', $grupo);
