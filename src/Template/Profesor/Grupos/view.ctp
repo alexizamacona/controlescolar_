@@ -53,15 +53,15 @@
   <div class="collapsible-body"><span>
       <div class="card-panel">
 
-    <?php if (!empty($alumnos)){ ?>
+    <?php if (!empty($grupo->inscripciones)){ ?>
         <table cellpadding="0" cellspacing="0" >
             <tr>
                 <th scope="col"><?= __('nombre') ?></th>
             </tr>
-            <?php foreach ($alumnos->inscripciones as $alumno):?>
+            <?php foreach ($grupo->inscripciones as $alumno):?>
                 <tr>
 
-                    <td><?php print_r($alumno->Users['nombre'])." ".print_r($alumno->Users['apellido_paterno']).' '.print_r($alumno->Users['apellido_materno']) ?></td>
+                    <td><?php print_r($alumno->user['nombre']).' '.print_r($alumno->user['apellido_paterno']).' '.print_r($alumno->user['apellido_materno']) ?></td>
                 </tr>
             <?php endforeach; ?>
         </table>
