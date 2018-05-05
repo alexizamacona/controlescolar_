@@ -10,11 +10,12 @@ class MateriasController extends AppController
 		$materias = $this->Materias->get($id, [
 			'contain' => ['Carreras','Grupos'=>['Users']]
 			]);
+		$user = $this->Materias->Grupos->Users->find()->toArray();
 		$this->set('materia', $materias);
-		$this->set('maestro',$user);
-		
+		$this->set('maestro',$user);	
 	}
-	/********************************************************/
+
+
 	public function add($id=null) {
 		$materia = $this->Materias->newEntity();
 		if ($this->request->is('post')) {

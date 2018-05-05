@@ -18,15 +18,14 @@
         <?php foreach ($materia['grupos'] as $g):?>
             <tr>
              
-
              Maestro: <a href="/admin/users/view/<?=$maestro[$g['user_id']]['id']?>"><?= h($maestro[$g['user_id']]['nombre']) ?></a>
   
             Grupo: <a href="/admin/grupos/view/<?=$g['id']?>"><?=$g['clave']?></a><br>
-             <?= $this->Html->link(__('Asignar materia a un grupo'),['controller'=>'Grupos','action'=>'add', $materia['id']]) ?>
 
          <br>
      </tr>
  <?php endforeach; ?>
 </div>
+<?= $this->Html->link(__('Asignar materia a un grupo'),['controller'=>'Grupos','action'=>'add', $materia['id']]) ?>
 </div>
 </div >  
