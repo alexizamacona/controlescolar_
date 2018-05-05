@@ -52,7 +52,8 @@ $mat=$calif->materias;
 		</table>
 	<?php else: ?>
 
-		<h4 class="center">No estas asignado a este grupo</h4>
+		<h4 class="center">No tienes ninguna actividad registrada o no estas asignado a este grupo</h4>
+		<p class="center">Ponte en contacto con el profesor para resolver esta situación</p>
 	<?php endif ?>
 	
 

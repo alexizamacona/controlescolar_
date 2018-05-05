@@ -23,7 +23,7 @@
                                 <td><?php print_r(h($usuario->grupo->materia['name'])) ?></td>
                                 <td><?php print_r(h($usuario->grupo->materia['grado'])) ?></td>
                                 <td><?php print_r(h($usuario->grupo->materia['creditos'])) ?></td>
-                                <td><?php print_r(h($usuario->grupo['clave'])) ?></td>
+                                <td><a href="/grupos/view/<?php echo $usuario['grupo_id']?>"><?php print_r(h($usuario->grupo['clave'])) ?></a></td>
                                 
                             </tr>
                         <?php  endforeach; ?>
