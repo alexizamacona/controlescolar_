@@ -5,7 +5,7 @@ use App\Controller\AppController;
 
 class GruposController extends AppController
 {
-	public function add()
+	public function add($id_materia=null)
 	{
 		$grupo = $this->Grupos->newEntity();
 		if ($this->request->is('post')) {
@@ -24,27 +24,28 @@ class GruposController extends AppController
 		$this->set(compact("grupo"));
 		$this->set(compact("materias"));
 		$this->set(compact("users"));
+		$this->set(compact("id_materia"));
 	}
-/****************************************************/
+	/****************************************************/
 	public function view($id=null)
 	{
 		$grupo = $this->Grupos->get($id, [
 			'contain' => ['Users', 'Materias']
-		]);
+			]);
 		$this->set('grupo', $grupo);
 	}
-/****************************************************/
+	/****************************************************/
 	public function index(){
 		$grupos = $this->Grupos->find()->contain(['Materias','Users']);
 
 
 		$this->set(compact('grupos'));
 	}
-/****************************************************/
+	/****************************************************/
 	public function edit($id = null){
 		$grupo= $this->Grupos->get($id, [
 			'contain' => []
-		]);
+			]);
 		if ($this->request->is(['patch', 'post', 'put'])) {
 			$grupo = $this->Grupos->patchEntity($grupo, $this->request->getData());
 			if ($this->Grupos->save($grupo)) {
@@ -61,5 +62,17 @@ class GruposController extends AppController
 		$this->set(compact('materias'));
 		$this->set(compact('users'));
 	}
-/****************************************************/
+	/****************************************************/
+	Public function lista($id){
+		$grupo = $this->Grupos->get($id, [
+			'contain' => [
+				'Users', 
+				'Materias', 
+				
+					'Inscripciones'=>'Users'
+				
+			]
+			]);
+		$this->set('grupo', $grupo);
+	}
 }

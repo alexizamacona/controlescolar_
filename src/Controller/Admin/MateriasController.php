@@ -5,18 +5,18 @@ use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 class MateriasController extends AppController
 {	
-	public function view($id)
+	public function view($id=null)
 	{
-		$materias = $this ->Materias->get($id, [
-			'contain' => ['Carreras','Grupos']
+		$materias = $this->Materias->get($id, [
+			'contain' => ['Carreras','Grupos'=>['Users']]
 			]);
 		$user = $this->Materias->Grupos->Users->find()->toArray();
 		$this->set('materia', $materias);
-		$this->set('maestro',$user);
-		
+		$this->set('maestro',$user);	
 	}
-	/********************************************************/
-	public function add($id) {
+
+
+	public function add($id=null) {
 		$materia = $this->Materias->newEntity();
 		if ($this->request->is('post')) {
 			$materia = $this->Materias->patchEntity($materia, $this->request->getData());
@@ -28,7 +28,8 @@ class MateriasController extends AppController
 			$this->Flash->error(__('The materia could not be saved. Please, try again.'));
 		}
 		$carreras = $this->Materias->Carreras->find('list');
-		$this->set(compact('materia', 'carreras','id'));
+		$this->set(compact('materia', 'carreras'));
+		$this->set(compact('id'));
 	}
 	/********************************************************/
 	public function index(){

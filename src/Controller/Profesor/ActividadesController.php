@@ -13,7 +13,7 @@ class ActividadesController extends AppController{
 			if ($this->Actividades->save($actividad)) {
 				$this->Flash->success(__('La actividad ha sido registrada exitosamente.'));
 
-				return $this->redirect(['action' => 'index']);
+				return $this->redirect(['/profesor']);
 			}
 			$this->Flash->error(__('La actividad no ha podido ser registrada. Por favor, intente de nuevo.'));
 			debug($actividad);
