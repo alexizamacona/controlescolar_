@@ -8,8 +8,9 @@ class GruposController extends AppController
 	public function view($id=null)
 	{
 		$grupo = $this->Grupos->get($id, [
-			'contain' => ['Users', 'Materias']
+			'contain' => ['Users', 'Materias','Actividades']
 			]);
+
 		$this->set('grupo', $grupo);
 	}
 	public function index()
