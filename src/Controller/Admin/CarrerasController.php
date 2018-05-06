@@ -36,6 +36,7 @@ class CarrerasController extends AppController
 			
 		]);
 		$this->set('carrera', $carrera);
+		
 	}
 /****************************************************/
 	public function edit($id = null)

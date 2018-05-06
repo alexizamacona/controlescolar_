@@ -57,11 +57,17 @@
         <table cellpadding="0" cellspacing="0" >
             <tr>
                 <th scope="col"><?= __('nombre') ?></th>
+                
             </tr>
             <?php foreach ($grupo->inscripciones as $alumno):?>
+
                 <tr>
 
-                    <td><?php print_r($alumno->user['nombre']).' '.print_r($alumno->user['apellido_paterno']).' '.print_r($alumno->user['apellido_materno']) ?></td>
+
+                    <td><?php print_r($alumno->user['nombre']) ?></td>
+                    <td><?php print_r($alumno->user['apellido_paterno']) ?></td>
+                    <td><?php print_r($alumno->user['apellido_materno']) ?></td>
+
                 </tr>
             <?php endforeach; ?>
         </table>
