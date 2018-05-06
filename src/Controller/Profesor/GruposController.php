@@ -15,7 +15,9 @@ class GruposController extends AppController
 	}
 	public function index()
 	{
-		
+		$uid = $this->Auth->user('id');
+		$grupos = $this->Grupos->find()->where(['user_id'=>$uid])->contain(['Materias']);
+		$this->set(compact('grupos'));
 	}
 
 	public function lista($id)
@@ -34,5 +36,16 @@ class GruposController extends AppController
 		$asistencias = $this->Grupos->get($id, [
 			'contain' => ['Inscripciones'=>['Users'=>['Asistencias'=>'Horarios'],'Grupos']]]);
 		$this->set(compact('asistencias'));
+	}
+	public function pasarlista($id=null)
+	{
+		$alumnos = $this->Grupos->get($id, [
+			'contain' => ['Inscripciones'=>['Users'=>['Asistencias'=>'Horarios'],'Grupos']]]);
+		$this->set(compact('alumnos'));
+
+	}
+
+	public function savelista($idgrupo=null,$alumnos=null){
+		
 	}
 }

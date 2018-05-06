@@ -121,6 +121,7 @@
 <?php endif ?>
 
 <a href="/profesor/" class="waves-effect waves-light btn">Inicio</a> 
+<a href=<?="/profesor/grupos/pasarlista/$grupo->id/"?> class="waves-effect waves-light btn">Pasar lista</a>
 <script>
      $(document).ready(function(){
     $('.collapsible').collapsible();
