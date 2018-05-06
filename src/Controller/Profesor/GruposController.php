@@ -15,7 +15,7 @@ class GruposController extends AppController
 	}
 	public function index()
 	{
-
+		
 	}
 
 	public function lista($id)

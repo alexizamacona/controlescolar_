@@ -1,15 +1,16 @@
 <div class="card-panel">
 		<h6>Lista de asistencia</h6>
-		<ul class="collapsible popout">
+		<ul class=>
 	<?php foreach ($asistencias->inscripciones as $a): ?>
 			<li>
-				<div class="collapsible-header"><?=$a->user->nombre.' '.$a->user->apellido_paterno?></div>
-				<div class="collapsible-body"><span>
+				<br><div class=><?=$a->user->nombre.' '.$a->user->apellido_paterno?></div>
+				<div class=><span>
 					<table>
 						<thead>
 							<tr>
 
 								<th>Grupo</th>
+								<th>Turno</th>
 								<th>Día</th>
 								<th>Asistio</th>
 							</tr>
@@ -20,6 +21,7 @@
 								<?php foreach ($a->user->asistencias as $as): ?>
 
 									<td><?=$a->grupo->clave?></td>
+									<td><?=$a->grupo->turno?></td>
 									<td><?=$as->horario->dia?></td>
 									<?php if ($as->valor == 1): ?>
 										<td>Sí</td>
