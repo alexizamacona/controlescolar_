@@ -85,6 +85,7 @@
           <tr>
               <th>Descripción</th>
               <th>Porcentaje</th>
+              <th>Ver</th>
           </tr>
         </thead>
 
@@ -93,6 +94,7 @@
                 <tr>
                     <td><?= $a->descripcion?></td>
                     <td><?= $a->porcentaje?>%</td>
+                    <td><a href=<?="/profesor/actividades/view/$a->id"?>>Ver calificaciones</a></td>
                 </tr>
                 
             <?php endforeach ?>
