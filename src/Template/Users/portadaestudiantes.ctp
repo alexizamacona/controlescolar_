@@ -1,4 +1,3 @@
-
 <h4>Bienvenido <?= h($yo->nombre_completo) ?></h4>
 <div id="test-swipe-1" class="col s12 white">
     <div id="test-swipe-1" class="col s12 white">
@@ -16,14 +15,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($yo->inscripciones as $usuario): ?>
+                    <?php foreach ($Inscripciones as $i): ?>
                         
 
                             <tr>
-                                <td><?php print_r(h($usuario->grupo->materia['name'])) ?></td>
-                                <td><?php print_r(h($usuario->grupo->materia['grado'])) ?></td>
-                                <td><?php print_r(h($usuario->grupo->materia['creditos'])) ?></td>
-                                <td><a href="/grupos/view/<?php echo $usuario['grupo_id']?>"><?php print_r(h($usuario->grupo['clave'])) ?></a></td>
+                                <td><?php print_r(h($i->grupo->materia->name)) ?></td>
+                                <td><?php print_r(h($i->grupo->materia->grado)) ?></td>
+                                <td><?php print_r(h($i->grupo->materia->creditos)) ?></td>
+                                <td><a href="/grupos/view/<?php echo $i->grupo->id?>"><?php print_r(h($i->grupo->clave)) ?></a></td>
                                 
                             </tr>
                         <?php  endforeach; ?>
@@ -34,5 +33,4 @@
 
     </div>
 </div>
-
 
